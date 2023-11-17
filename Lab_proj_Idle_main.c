@@ -26,10 +26,12 @@ volatile Bool isrFlag = FALSE; //flag used by idle function
 volatile Bool isrFlag2 = FALSE; //ES
 volatile UInt tickCount = 0; //counter incremented by timer interrupt
 int sec = 0;                    //ES
+int soc0_adc_voltage = 0;
+int soc1_adc_voltage = 0;
 
 /* ======== main ======== */
 Int main()
-{ 
+{
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
 
     //initialization:
@@ -46,8 +48,8 @@ Int main()
 Void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
-    if(tickCount % 5 == 0) {
-        isrFlag = TRUE; //tell idle thread to do something 20 times per second
+    if(tickCount % 50 == 0) {
+        isrFlag = TRUE; //tell idle thread to do something 2 times per second
     }
     if(tickCount % 100 == 0) {      //ES
         isrFlag2 = TRUE;
@@ -73,4 +75,14 @@ Void myIdleFxn2(Void)       //ES
         //print time in seconds to SysMin
         System_printf("Timer(sec) = %i \n",sec);
     }
+
 }                           //ES
+
+Void adc_hwi(Void)
+{
+    soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;
+    soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;
+    AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
+    System_printf("ADCINA5(V) = %i \n",soc0_adc_voltage);
+    System_printf("ADCINA3(V) = %i \n",soc1_adc_voltage);
+}
