@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/Lab_proj_Idle_p28FP.c"/>
     </sources>
     <configscripts>
-        <srcFile name="D:/E_Eng/ELEX7820/Labs/lab_project/Lab_proj_Idle.cfg"/>
+        <srcFile name="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -44,7 +44,7 @@
         isPartial="false"
         xCfgScript="package/cfg/Lab_proj_Idle_p28FP.cfg"
         xCfgPrefix="package/cfg/Lab_proj_Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/lab_project/Lab_proj_Idle.cfg"
+        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -56,7 +56,7 @@
         profile="release"
         xCfgScript="package/cfg/Lab_proj_Idle_p28FP.cfg"
         xCfgPrefix="package/cfg/Lab_proj_Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/lab_project/Lab_proj_Idle.cfg"
+        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"
         cfgArgs="null"
         />
     </executables>

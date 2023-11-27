@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'D:/E_Eng/ELEX7820/Labs/lab_project/Lab_proj_Idle.cfg',
+        cfgScript: 'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg',
         profile: 'release',
         cfgHome: 'configPkg',
 });
@@ -41,7 +41,7 @@ else {
 
 var thisObj = {
     cfg:        '../Lab_proj_Idle.cfg',
-    outputPath: 'D:/E_Eng/ELEX7820/Labs/lab_project/Debug/configPkg',
+    outputPath: 'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Debug/configPkg',
     exeName:    'Lab_proj_Idle' + suffix,
     exeIntName: 'Lab_proj_Idle' + suffix.replace('.', '_'),
     targ:       targ,

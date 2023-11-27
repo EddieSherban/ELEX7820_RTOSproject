@@ -44,9 +44,10 @@ EALLOW; //allow access to protected registers
 
     AdcaRegs.ADCSOC1CTL.bit.CHSEL = 3; //SOC1 will convert ADCINA3
     AdcaRegs.ADCSOC1CTL.bit.ACQPS = 145; //SOC1 will use sample duration of 31 SYSCLK cycles
-    AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 1; //SOC1 will begin conversion on CPU Timer 0
+    AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 1; //SOC1 will begin conversion on CPU Timer 0D
 
     AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 0; //connect interrupt ADCINT1 to EOC0
+
     AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;    //enable interrupt ADCINT1
 
 

@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./F2837xD_GlobalVariableDefs.obj" \
 "./Lab_proj_Idle_DevInit.obj" \
 "./Lab_proj_Idle_main.obj" \
+"./timer.obj" \
 "../F2837xD_Headers_BIOS_cpu1.cmd" \
 "../TMS320F28379D.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -157,8 +158,8 @@ labproject.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xD_GlobalVariableDefs.obj" "Lab_proj_Idle_DevInit.obj" "Lab_proj_Idle_main.obj" 
-	-$(RM) "F2837xD_GlobalVariableDefs.d" "Lab_proj_Idle_DevInit.d" "Lab_proj_Idle_main.d" 
+	-$(RM) "F2837xD_GlobalVariableDefs.obj" "Lab_proj_Idle_DevInit.obj" "Lab_proj_Idle_main.obj" "timer.obj" 
+	-$(RM) "F2837xD_GlobalVariableDefs.d" "Lab_proj_Idle_DevInit.d" "Lab_proj_Idle_main.d" "timer.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

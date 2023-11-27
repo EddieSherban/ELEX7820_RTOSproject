@@ -15,7 +15,8 @@ CMD_SRCS += \
 C_SRCS += \
 ../F2837xD_GlobalVariableDefs.c \
 ../Lab_proj_Idle_DevInit.c \
-../Lab_proj_Idle_main.c 
+../Lab_proj_Idle_main.c \
+../timer.c 
 
 GEN_CMDS += \
 ./configPkg/linker.cmd 
@@ -30,7 +31,8 @@ GEN_MISC_DIRS += \
 C_DEPS += \
 ./F2837xD_GlobalVariableDefs.d \
 ./Lab_proj_Idle_DevInit.d \
-./Lab_proj_Idle_main.d 
+./Lab_proj_Idle_main.d \
+./timer.d 
 
 GEN_OPTS += \
 ./configPkg/compiler.opt 
@@ -38,7 +40,8 @@ GEN_OPTS += \
 OBJS += \
 ./F2837xD_GlobalVariableDefs.obj \
 ./Lab_proj_Idle_DevInit.obj \
-./Lab_proj_Idle_main.obj 
+./Lab_proj_Idle_main.obj \
+./timer.obj 
 
 GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
@@ -46,12 +49,14 @@ GEN_MISC_DIRS__QUOTED += \
 OBJS__QUOTED += \
 "F2837xD_GlobalVariableDefs.obj" \
 "Lab_proj_Idle_DevInit.obj" \
-"Lab_proj_Idle_main.obj" 
+"Lab_proj_Idle_main.obj" \
+"timer.obj" 
 
 C_DEPS__QUOTED += \
 "F2837xD_GlobalVariableDefs.d" \
 "Lab_proj_Idle_DevInit.d" \
-"Lab_proj_Idle_main.d" 
+"Lab_proj_Idle_main.d" \
+"timer.d" 
 
 GEN_FILES__QUOTED += \
 "configPkg\linker.cmd" \
@@ -60,6 +65,7 @@ GEN_FILES__QUOTED += \
 C_SRCS__QUOTED += \
 "../F2837xD_GlobalVariableDefs.c" \
 "../Lab_proj_Idle_DevInit.c" \
-"../Lab_proj_Idle_main.c" 
+"../Lab_proj_Idle_main.c" \
+"../timer.c" 
 
 
