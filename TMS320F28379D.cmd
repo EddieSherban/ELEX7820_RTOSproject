@@ -172,6 +172,25 @@ SECTIONS
                             RAMGS10 | RAMGS11 | RAMGS12 | RAMGS13 | RAMGS14 |
                             RAMGS15 PAGE = 1
 
+	FFT_Twiddles     : LOAD = FLASHB,
+	                      RUN  = RAMGS12
+	                      RUN_START(_FFTTwiddlesRunStart),
+	                      LOAD_START(_FFTTwiddlesLoadStart),
+	                      LOAD_SIZE(_FFTTwiddlesLoadSize),
+	                      PAGE = 1
+	 /*{
+	     --library=c28x_fpu_dsp_library.lib<RFFT_f32_twiddleFactors.obj> (.econst)
+	 }*/
+
+	   /* Test specific sections */
+	   RFFTdata1        : > RAMGS4,    PAGE = 1   ALIGN = 128
+	   //RFFTdata1        : > 0x00010002
+	   RFFTdata2        : > RAMGS5,    PAGE = 1
+	   RFFTdata3        : > RAMGS6,    PAGE = 1
+	   RFFTdata4        : > RAMGS7,    PAGE = 1
+
+	   /*FPUmathTables    : > RAMGS8,    PAGE = 1*/
+
     /* The following section definitions are required when using the IPC API Drivers */
     GROUP : > CPU1TOCPU2RAM, PAGE = 1
     {

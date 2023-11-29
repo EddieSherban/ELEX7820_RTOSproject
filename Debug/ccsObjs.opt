@@ -1,1 +1,1 @@
-"./F2837xD_GlobalVariableDefs.obj" "./Lab_proj_Idle_DevInit.obj" "./Lab_proj_Idle_main.obj" "./timer.obj" "../F2837xD_Headers_BIOS_cpu1.cmd" "../TMS320F28379D.cmd" -l"configPkg/linker.cmd" -llibc.a 
+"./DelayUs.obj" "./F2837xD_GlobalVariableDefs.obj" "./Lab_proj_Idle_DevInit.obj" "./Lab_proj_Idle_main.obj" "./timer.obj" "./dsp/RFFT_f32.obj" "./dsp/RFFT_f32_mag.obj" "./dsp/RFFT_f32_phase.obj" "./dsp/RFFT_f32_sincostable.obj" "./periph/F28379DZTQ/F28379D_i2c.obj" "../F2837xD_Headers_BIOS_cpu1.cmd" "../TMS320F28379D.cmd" -l"configPkg/linker.cmd" -llibc.a 

@@ -138,6 +138,12 @@ Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F283
 Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xbar.h
 Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xint.h
 Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_can.h
+Lab_proj_Idle_main.obj: ../dsp/fpu_rfft.h
+Lab_proj_Idle_main.obj: ../dsp/fpu_types.h
+Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/float.h
+Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/math.h
+Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_defs.h
+Lab_proj_Idle_main.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_limits.h
 
 ../Lab_proj_Idle_main.c:
 
@@ -414,4 +420,16 @@ D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xbar.h:
 D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xint.h:
 
 D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_can.h:
+
+../dsp/fpu_rfft.h:
+
+../dsp/fpu_types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/float.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/math.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_defs.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_limits.h:
 

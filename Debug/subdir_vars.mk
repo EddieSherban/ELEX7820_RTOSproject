@@ -12,6 +12,9 @@ CMD_SRCS += \
 ../F2837xD_Headers_BIOS_cpu1.cmd \
 ../TMS320F28379D.cmd 
 
+ASM_SRCS += \
+../DelayUs.asm 
+
 C_SRCS += \
 ../F2837xD_GlobalVariableDefs.c \
 ../Lab_proj_Idle_DevInit.c \
@@ -38,15 +41,20 @@ GEN_OPTS += \
 ./configPkg/compiler.opt 
 
 OBJS += \
+./DelayUs.obj \
 ./F2837xD_GlobalVariableDefs.obj \
 ./Lab_proj_Idle_DevInit.obj \
 ./Lab_proj_Idle_main.obj \
 ./timer.obj 
 
+ASM_DEPS += \
+./DelayUs.d 
+
 GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
 
 OBJS__QUOTED += \
+"DelayUs.obj" \
 "F2837xD_GlobalVariableDefs.obj" \
 "Lab_proj_Idle_DevInit.obj" \
 "Lab_proj_Idle_main.obj" \
@@ -61,6 +69,12 @@ C_DEPS__QUOTED += \
 GEN_FILES__QUOTED += \
 "configPkg\linker.cmd" \
 "configPkg\compiler.opt" 
+
+ASM_DEPS__QUOTED += \
+"DelayUs.d" 
+
+ASM_SRCS__QUOTED += \
+"../DelayUs.asm" 
 
 C_SRCS__QUOTED += \
 "../F2837xD_GlobalVariableDefs.c" \
