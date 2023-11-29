@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Limit Switches")
+    (date "2023-11-29")
+    (rev "A")
+    (company "Eddie and Felix")
+  )
+
   (lib_symbols
     (symbol "Switch:SW_SPDT" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
       (property "Reference" "SW" (at 0 4.318 0)

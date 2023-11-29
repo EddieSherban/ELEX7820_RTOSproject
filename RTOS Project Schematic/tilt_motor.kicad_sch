@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Tilt Motor")
+    (date "2023-11-29")
+    (rev "A")
+    (company "Eddie and Felix")
+  )
+
   (lib_symbols
     (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "C" (at 0.635 2.54 0)
@@ -517,7 +524,7 @@
     (property "Reference" "C1" (at 111.76 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 111.76 85.09 0)
+    (property "Value" "100u" (at 111.76 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (at 108.9152 87.63 0)

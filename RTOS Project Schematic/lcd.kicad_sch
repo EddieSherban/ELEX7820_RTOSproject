@@ -1,0 +1,17 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 6618ea04-ec35-46f7-a604-03039668a5d4)
+
+  (paper "A4")
+
+  (title_block
+    (title "LCD")
+    (date "2023-11-29")
+    (rev "A")
+    (company "Eddie and Felix")
+  )
+
+  (lib_symbols
+  )
+
+)

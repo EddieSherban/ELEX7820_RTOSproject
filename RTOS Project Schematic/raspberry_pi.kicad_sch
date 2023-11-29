@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Raspberry Pi")
+    (date "2023-11-29")
+    (rev "A")
+    (company "Eddie and Felix")
+  )
+
   (lib_symbols
     (symbol "MCU_RaspberryPi:RP2040" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 17.78 45.72 0)

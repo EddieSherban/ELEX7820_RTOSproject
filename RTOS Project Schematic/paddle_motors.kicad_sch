@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Paddle Motors")
+    (date "2023-11-29")
+    (rev "A")
+    (company "Eddie and Felix")
+  )
+
   (lib_symbols
     (symbol "Driver_Motor:L298N" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -10.16 16.51 0)
