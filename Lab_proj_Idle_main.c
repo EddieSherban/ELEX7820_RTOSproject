@@ -11,7 +11,7 @@
 //defines:
 #define xdc__strict //suppress typedef warnings
 
-#define RFFT_STAGES     32
+#define RFFT_STAGES     8
 #define RFFT_SIZE       (1 << RFFT_STAGES)
 #define EPSILON         0.01
 #define PI 3.14159265358979323
@@ -61,6 +61,9 @@ RFFT_F32_STRUCT rfft;
 //Declare and initialize FFT structure object:
 RFFT_F32_STRUCT_Handle hnd_rfft = &rfft;
 
+float RadStep = 0.1963495408494f; //step
+float Rad = 0.0f;
+
 Uint16 once = TRUE;
 Uint16 bin = 0;
 int32_t count = 1;
@@ -77,15 +80,29 @@ Int main()
 
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
 
-
-
-    //initialization:
-    DeviceInit(); //initialize processor
-
     //Clear input buffer:
     for(i=0; i < RFFT_SIZE; i++){
         RFFTin1Buff[i] = 0.0f;
     }
+
+    hnd_rfft->FFTSize   = RFFT_SIZE;
+    hnd_rfft->FFTStages = RFFT_STAGES;
+    hnd_rfft->InBuf     = &RFFTin1Buff[0];  //Input buffer
+    hnd_rfft->OutBuf    = &RFFToutBuff[0];  //Output buffer
+    hnd_rfft->MagBuf    = &RFFTmagBuff[0];  //Magnitude buffer
+    //hnd_rfft->CosSinBuf = RFFT_f32_twiddleFactors; //Twiddle factor buffer
+    hnd_rfft->CosSinBuf = &RFFTF32Coef[0];  //twiddle factor buffer
+
+    for (i=0; i < RFFT_SIZE; i++){ //may not be necessary
+        RFFToutBuff[i] = 0;     //clean up output buffer
+    }
+
+    for(i=0; i < RFFT_SIZE/2; i++) {//may not be necessary
+        RFFTmagBuff[i] = 0;     //clean up magnitude buffer
+    }
+
+    //initialization:
+    DeviceInit(); //initialize processor
 
     //jump to RTOS (does not return):
     BIOS_start();
@@ -122,27 +139,12 @@ Void myIdleFxn(Void)
     // Generate waveform:
     //Rad = 0.0f
     for(i=0; i < RFFT_SIZE; i++){
-        //RFFTin1Buff[i] = sin(Rad) + cos(Rad*2.3567); //Real input signal
-        //RFFTin1Buff[i] = sin(2 * PI * i * bin / RFFT_SIZE);
-        //Rad = Rad + RadStep;
+        RFFTin1Buff[i] = sin(Rad) + cos(Rad*2.3567); //Real input signal
+        RFFTin1Buff[i] = sin(2 * PI * i * bin / RFFT_SIZE);
+        Rad = Rad + RadStep;
     }
 
-    hnd_rfft->FFTSize   = RFFT_SIZE;
-    hnd_rfft->FFTStages = RFFT_STAGES;
-    hnd_rfft->InBuf     = &RFFTin1Buff[0];  //Input buffer
-    hnd_rfft->OutBuf    = &RFFToutBuff[0];  //Output buffer
-    hnd_rfft->MagBuf    = &RFFTmagBuff[0];  //Magnitude buffer
-    //hnd_rfft->CosSinBuf = RFFT_f32_twiddleFactors; //Twiddle factor buffer
-    hnd_rfft->CosSinBuf = &RFFTF32Coef[0];  //twiddle factor buffer
     RFFT_f32_sincostable(hnd_rfft);         //Calculate twiddle factor
-
-    for (i=0; i < RFFT_SIZE; i++){ //may not be necessary
-        RFFToutBuff[i] = 0;     //clean up output buffer
-    }
-
-    for(i=0; i < RFFT_SIZE/2; i++) {//may not be necessary
-        RFFTmagBuff[i] = 0;     //clean up magnitude buffer
-    }
     RFFT_f32(hnd_rfft);         //calculate real FFT
     RFFT_f32_mag(hnd_rfft);     //calculate magnitude
     RFFT_f32_phase(hnd_rfft);   //calculate phase
