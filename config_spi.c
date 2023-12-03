@@ -4,7 +4,9 @@ void config_spi(void)
 {
     EALLOW;
 
+    // Enable SPIa clocks
     CpuSysRegs.PCLKCR8.bit.SPI_A = 1;
+    ClkCfgRegs.LOSPCP.bit.LSPCLKDIV = 0; // Set LSPCLK equal to SYSCLK
 
     // Enable pull-up resistors for SPI pins
     GpioCtrlRegs.GPBPUD.bit.GPIO58 = 0;
@@ -12,21 +14,24 @@ void config_spi(void)
     GpioCtrlRegs.GPBPUD.bit.GPIO60 = 0;
     GpioCtrlRegs.GPBPUD.bit.GPIO61 = 0;
 
-    // Set SPI pins to asynchronous
+    // Set SPI pins to asynchronous input qualification
     GpioCtrlRegs.GPBQSEL2.bit.GPIO58 = 0b11;
     GpioCtrlRegs.GPBQSEL2.bit.GPIO59 = 0b11;
     GpioCtrlRegs.GPBQSEL2.bit.GPIO60 = 0b11;
     GpioCtrlRegs.GPBQSEL2.bit.GPIO61 = 0b11;
 
     // Configure SPI pins
+    // Peripheral group mux
     GpioCtrlRegs.GPBGMUX2.bit.GPIO58 = 0b11;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO59 = 0b11;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO60 = 0b11;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO61 = 0b11;
+    // Mux 2
     GpioCtrlRegs.GPBMUX2.bit.GPIO58 = 0b11;
     GpioCtrlRegs.GPBMUX2.bit.GPIO59 = 0b11;
     GpioCtrlRegs.GPBMUX2.bit.GPIO60 = 0b11;
     GpioCtrlRegs.GPBMUX2.bit.GPIO61 = 0b11;
+
     EDIS;
 
     // Step 1. Clear the SPI Software Reset bit (SPISWRESET) to 0 to force the SPI to the reset state.
@@ -41,10 +46,7 @@ void config_spi(void)
     SpiaRegs.SPICTL.bit.CLK_PHASE = 0;
 
     // • Set the desired baud rate (SPIBRR).
-    // No effect if in SLAVE mode.
-    EALLOW;
-    ClkCfgRegs.LOSPCP.bit.LSPCLKDIV = 0; // Set LSPCLK equal to SYSCLK
-    EDIS;
+    // No effect if in SLAVE mode. Keep in case MASTER is needed.
     SpiaRegs.SPIBRR.bit.SPI_BIT_RATE = 0x3;
 
     // • Enable high speed mode if desired (HS_MODE).
@@ -77,6 +79,7 @@ void config_spi(void)
 
     // • In FIFO mode, set the transmit and receive interrupt levels (TXFFIL and RXFFIL) then
     // enable the interrupts (TXFFIENA and RXFFIENA).
+    // Not needed.
 
     // Step 4. Set SPISWRESET to 1 to release the SPI from the reset state.
     SpiaRegs.SPICCR.bit.SPISWRESET = 0x1;
