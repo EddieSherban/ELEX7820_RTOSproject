@@ -20,8 +20,13 @@
 #include <xdc/std.h>
 #include <xdc/runtime/System.h>
 #include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Swi.h>
+
 
 #include <Headers/F2837xD_device.h>
+
+//Swi handle defined in .cfg file:
+//extern const Swi_Handle swi0;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -80,6 +85,7 @@ Int main()
 
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
 
+    //FFT init
     //Clear input buffer:
     for(i=0; i < RFFT_SIZE; i++){
         RFFTin1Buff[i] = 0.0f;
@@ -110,11 +116,12 @@ Int main()
 }
 
 /* ======== myTickFxn ======== */
-//Timer tick function that increments a counter and sets the isrFlag
+//Timer tick function t hat increments a counter and sets the isrFlag
 //Entered 100 times per second if PLL and Timer set up correctly
 Void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
+    //Swi_post(swi0);
     if(tickCount % 50 == 0) {
         isrFlag = TRUE; //tell idle thread to do something 2 times per second
     }
@@ -169,6 +176,42 @@ Void myIdleFxn2(Void)       //ES
 Void adc_hwi(Void)
 {
     soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;   //result for ADCINA5
-    soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+    //soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
+    System_printf("adca5 voltage: %i \n",soc0_adc_voltage);
+    System_printf("adca3 voltage: %i \n",soc1_adc_voltage);
+}
+
+Void calc_FFT_swi4(Void)
+{
+ /*   //determine if tickCount is a prime:
+    UInt counter, flag;
+
+    counter = 2;
+    flag = 1;
+    while(counter < tickCount) {
+        if(tickCount % counter == 0){
+            flag = 0;
+        }
+        counter++;
+    }
+    if(flag == 1 && tickCount != 1){
+        GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1; //toggle red LED
+        //System_printf("tickCount: %u\n", tickCount);
+    }*/
+}
+
+Void table_tilt(Void)
+{
+
+}
+
+Void clamp1_edges(Void)
+{
+
+}
+
+Void clamp2_edges(Void)
+{
+
 }

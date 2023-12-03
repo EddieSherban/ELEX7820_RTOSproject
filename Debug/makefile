@@ -154,7 +154,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 labproject.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"labproject.map" --stack_size=0x200 --warn_sections -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="labproject_linkInfo.xml" --rom_model -o "labproject.out" $(ORDERED_OBJS)
+	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --advice:performance=all --define=CPU1 -g --c11 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"labproject.map" --stack_size=0x200 --warn_sections -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="labproject_linkInfo.xml" --rom_model -o "labproject.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
