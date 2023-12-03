@@ -1658,7 +1658,7 @@ __FAR__ const xdc_SizeT ti_sysbios_knl_Task_Module_State_terminatedQ__O = offset
  *  Define absolute path prefix for this executable's
  *  configuration generated files.
  */
-xdc__META(__ASM__, "@(#)__ASM__ = D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Debug/configPkg/package/cfg/Lab_proj_Idle_p28FP");
+xdc__META(__ASM__, "@(#)__ASM__ = C:/TexasInstruments/projects/ELEX7820_RTOSproject/Debug/configPkg/package/cfg/Lab_proj_Idle_p28FP");
 
 /*
  *  ======== __ISA__ ========

@@ -2,20 +2,20 @@
 
 F2837xD_GlobalVariableDefs.obj: ../F2837xD_GlobalVariableDefs.c
 F2837xD_GlobalVariableDefs.obj: ../Headers/F2837xD_device.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/assert.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_ti_config.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/linkage.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdarg.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_types.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/cdefs.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_types.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdbool.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stddef.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdint.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_stdint40.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/stdint.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_stdint.h
-F2837xD_GlobalVariableDefs.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_stdint.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/assert.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_ti_config.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/linkage.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdarg.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_types.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/cdefs.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_types.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdbool.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stddef.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdint.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_stdint40.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/stdint.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_stdint.h
+F2837xD_GlobalVariableDefs.obj: C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_stdint.h
 F2837xD_GlobalVariableDefs.obj: ../Headers/F2837xD_adc.h
 F2837xD_GlobalVariableDefs.obj: ../Headers/F2837xD_analogsubsys.h
 F2837xD_GlobalVariableDefs.obj: ../Headers/F2837xD_cla.h
@@ -55,33 +55,33 @@ F2837xD_GlobalVariableDefs.obj: ../Headers/F2837xD_can.h
 
 ../Headers/F2837xD_device.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/assert.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/assert.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_ti_config.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_ti_config.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/linkage.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/linkage.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdarg.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdarg.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_types.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_types.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/cdefs.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/cdefs.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_types.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_types.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdbool.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdbool.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stddef.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stddef.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdint.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/stdint.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_stdint40.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_stdint40.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/stdint.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/stdint.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_stdint.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/machine/_stdint.h:
 
-D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_stdint.h:
+C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/sys/_stdint.h:
 
 ../Headers/F2837xD_adc.h:
 

@@ -19,6 +19,6 @@ if (!(target instanceof xdc.module("xdc.bld.ITarget").Module)) {
 target.ccOpts.prefix = unescape("-g%20") + target.ccOpts.prefix;
 
 /* configuro was passed the target's rootDir explicitly */
-target.rootDir = 'D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS';
+target.rootDir = 'C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS';
 
 Build.targets = [target];

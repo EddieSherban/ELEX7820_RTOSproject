@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS
+CG_TOOL_ROOT := C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS
 
 GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt" 
 GEN_CMDS__FLAG := -l"configPkg/linker.cmd" 
@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./F2837xD_GlobalVariableDefs.obj" \
 "./Lab_proj_Idle_DevInit.obj" \
 "./Lab_proj_Idle_main.obj" \
+"./config_spi.obj" \
 "./timer.obj" \
 "../F2837xD_Headers_BIOS_cpu1.cmd" \
 "../TMS320F28379D.cmd" \
@@ -124,42 +125,42 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-labproject.out \
+ELEX7820_RTOSproject.out \
 
 EXE_OUTPUTS__QUOTED += \
-"labproject.out" \
+"ELEX7820_RTOSproject.out" \
 
 BIN_OUTPUTS += \
-labproject.hex \
+ELEX7820_RTOSproject.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"labproject.hex" \
+"ELEX7820_RTOSproject.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "labproject.out"
+	@$(MAKE) --no-print-directory -Onone "ELEX7820_RTOSproject.out"
 
 # Tool invocations
-labproject.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+ELEX7820_RTOSproject.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"labproject.map" --stack_size=0x200 --warn_sections -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="labproject_linkInfo.xml" --rom_model -o "labproject.out" $(ORDERED_OBJS)
+	"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"ELEX7820_RTOSproject.map" --stack_size=0x200 --warn_sections -i"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="ELEX7820_RTOSproject_linkInfo.xml" --rom_model -o "ELEX7820_RTOSproject.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-labproject.hex: $(EXE_OUTPUTS)
+ELEX7820_RTOSproject.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: C2000 Hex Utility'
-	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "labproject.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "ELEX7820_RTOSproject.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xD_GlobalVariableDefs.obj" "Lab_proj_Idle_DevInit.obj" "Lab_proj_Idle_main.obj" "timer.obj" 
-	-$(RM) "F2837xD_GlobalVariableDefs.d" "Lab_proj_Idle_DevInit.d" "Lab_proj_Idle_main.d" "timer.d" 
+	-$(RM) "F2837xD_GlobalVariableDefs.obj" "Lab_proj_Idle_DevInit.obj" "Lab_proj_Idle_main.obj" "config_spi.obj" "timer.obj" 
+	-$(RM) "F2837xD_GlobalVariableDefs.d" "Lab_proj_Idle_DevInit.d" "Lab_proj_Idle_main.d" "config_spi.d" "timer.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

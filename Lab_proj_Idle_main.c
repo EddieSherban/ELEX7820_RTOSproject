@@ -20,6 +20,7 @@
 
 //function prototypes:
 extern void DeviceInit(void);
+extern void config_spi(void);
 
 //declare global variables:
 volatile Bool isrFlag = FALSE; //flag used by idle function
@@ -30,12 +31,13 @@ int soc0_adc_voltage = 0;
 int soc1_adc_voltage = 0;
 
 /* ======== main ======== */
-Int main()
+int main()
 {
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
 
     //initialization:
     DeviceInit(); //initialize processor
+    config_spi();
 
     //jump to RTOS (does not return):
     BIOS_start();
@@ -45,7 +47,7 @@ Int main()
 /* ======== myTickFxn ======== */
 //Timer tick function that increments a counter and sets the isrFlag
 //Entered 100 times per second if PLL and Timer set up correctly
-Void myTickFxn(UArg arg)
+void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
     if(tickCount % 50 == 0) {
@@ -58,7 +60,7 @@ Void myTickFxn(UArg arg)
 
 /* ======== myIdleFxn ======== */
 //Idle function that is called repeatedly from RTOS
-Void myIdleFxn(Void)
+void myIdleFxn(void)
 {
    if(isrFlag == TRUE) {
        isrFlag = FALSE;
@@ -67,7 +69,7 @@ Void myIdleFxn(Void)
    }
 }
 
-Void myIdleFxn2(Void)       //ES
+void myIdleFxn2(void)       //ES
 {
     if(isrFlag2 == TRUE) {
         isrFlag2 = FALSE;
@@ -78,7 +80,7 @@ Void myIdleFxn2(Void)       //ES
 
 }                           //ES
 
-Void adc_hwi(Void)
+void adc_hwi(void)
 {
     soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;
     soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;

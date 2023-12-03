@@ -15,86 +15,86 @@ XDCCFGDIR = package/cfg/
 # in the event that some included BOM script changes.
 #
 ifneq (clean,$(MAKECMDGOALS))
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/utils.js:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/utils.js
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/xdc.tci:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/xdc.tci
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/template.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/template.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/om2.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/om2.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/xmlgen.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/xmlgen.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/xmlgen2.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/xmlgen2.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/Warnings.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/Warnings.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/IPackage.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/IPackage.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/package.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/package.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/global/Clock.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/global/Clock.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/global/Trace.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/global/Trace.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/bld.js:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/bld.js
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/BuildEnvironment.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/BuildEnvironment.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/PackageContents.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/PackageContents.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/_gen.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/_gen.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Library.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Library.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Executable.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Executable.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Repository.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Repository.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Configuration.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Configuration.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Script.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Script.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Manifest.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Manifest.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Utils.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/Utils.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget2.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget2.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget3.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget3.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITargetFilter.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/ITargetFilter.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/package.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/bld/package.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/utils.js:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/utils.js
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/xdc.tci:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/xdc.tci
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/template.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/template.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/om2.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/om2.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/xmlgen.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/xmlgen.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/xmlgen2.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/xmlgen2.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/Warnings.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/Warnings.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/IPackage.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/IPackage.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/package.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/package.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/global/Clock.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/global/Clock.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/global/Trace.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/global/Trace.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/bld.js:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/bld.js
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/BuildEnvironment.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/BuildEnvironment.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/PackageContents.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/PackageContents.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/_gen.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/_gen.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Library.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Library.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Executable.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Executable.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Repository.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Repository.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Configuration.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Configuration.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Script.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Script.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Manifest.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Manifest.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Utils.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/Utils.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget2.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget2.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget3.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITarget3.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITargetFilter.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/ITargetFilter.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/package.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/bld/package.xs
 package.mak: config.bld
-D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/ITarget.xs:
-package.mak: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/ITarget.xs
-D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/C28_large.xs:
-package.mak: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/C28_large.xs
-D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/C28_float.xs:
-package.mak: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/C28_float.xs
-D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/package.xs:
-package.mak: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/package.xs
+C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/ITarget.xs:
+package.mak: C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/ITarget.xs
+C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/C28_large.xs:
+package.mak: C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/C28_large.xs
+C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/C28_float.xs:
+package.mak: C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/C28_float.xs
+C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/package.xs:
+package.mak: C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/package.xs
 package.mak: package.bld
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.opt.xdt:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.opt.xdt
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/io/File.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/io/File.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/io/package.xs:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/io/package.xs
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.defs.xdt:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.defs.xdt
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/custom.mak.exe.xdt:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/custom.mak.exe.xdt
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/package.xs.xdt:
-package.mak: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/package.xs.xdt
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.opt.xdt:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.opt.xdt
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/io/File.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/io/File.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/io/package.xs:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/io/package.xs
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.defs.xdt:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/compiler.defs.xdt
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/custom.mak.exe.xdt:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/custom.mak.exe.xdt
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/package.xs.xdt:
+package.mak: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/tools/configuro/template/package.xs.xdt
 endif
 
-ti.targets.C28_float.rootDir ?= D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS
-ti.targets.packageBase ?= D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/
+ti.targets.C28_float.rootDir ?= C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS
+ti.targets.packageBase ?= C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/
 .PRECIOUS: $(XDCCFGDIR)/%.o28FP
 .PHONY: all,28FP .dlls,28FP .executables,28FP test,28FP
 all,28FP: .executables,28FP

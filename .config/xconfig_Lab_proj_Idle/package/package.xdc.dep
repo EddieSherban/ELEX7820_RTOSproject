@@ -30,24 +30,24 @@ xdc/IPackage.xdc:
 vpath xdc/IPackage.xdc $(XPKGVPATH)
 
 ifneq (clean,$(MAKECMDGOALS))
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/intern/cmd/java/package.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/intern/cmd/java/package.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/tar.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/tar.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/ecj.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/ecj.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/spec/java/package.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/spec/java/package.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/antlr.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/antlr.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/js.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/shelf/java/js.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/global/java/package.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/global/java/package.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/intern/gen/java/package.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/intern/gen/java/package.jar
-D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/intern/xsr/java/package.jar:
-package/package.xdc.inc: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/services/intern/xsr/java/package.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/tar.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/tar.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/js.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/js.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/global/java/package.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/global/java/package.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/ecj.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/ecj.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/intern/gen/java/package.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/intern/gen/java/package.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/spec/java/package.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/spec/java/package.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/intern/cmd/java/package.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/intern/cmd/java/package.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/intern/xsr/java/package.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/services/intern/xsr/java/package.jar
+C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/antlr.jar:
+package/package.xdc.inc: C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/xdc/shelf/java/antlr.jar
 endif
 # goals for files generated during schema generation but unspecified by schema's pattern rule
 

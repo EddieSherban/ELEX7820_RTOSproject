@@ -6,25 +6,25 @@
 #  template: ti.sysbios/makefile.xdt
 #  target: ti.targets.C28_float
 
-vpath % D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/
-vpath %.c D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/
+vpath % C:/TexasInstruments/bios_6_83_00_18/packages/ti/sysbios/
+vpath %.c C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/
 
-XOPTS = -I"D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/" -Dxdc_target_types__=D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/std.h -Dxdc_target_name__=C28_float
+XOPTS = -I"C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/" -Dxdc_target_types__=C:/TexasInstruments/bios_6_83_00_18/packages/ti/targets/std.h -Dxdc_target_name__=C28_float
 
 BIOS_DEFS =  -Dti_sysbios_BIOS_swiEnabled__D=TRUE -Dti_sysbios_BIOS_taskEnabled__D=TRUE -Dti_sysbios_BIOS_clockEnabled__D=TRUE -Dti_sysbios_BIOS_runtimeCreatesEnabled__D=TRUE -Dti_sysbios_knl_Task_moduleStateCheckFlag__D=FALSE -Dti_sysbios_knl_Task_objectCheckFlag__D=FALSE -Dti_sysbios_hal_Hwi_DISABLE_ALL_HOOKS -Dti_sysbios_knl_Swi_DISABLE_ALL_HOOKS -Dti_sysbios_BIOS_smpEnabled__D=FALSE -Dti_sysbios_BIOS_mpeEnabled__D=FALSE -Dti_sysbios_Build_useHwiMacros -Dti_sysbios_knl_Swi_numPriorities__D=16 -Dti_sysbios_knl_Task_deleteTerminatedTasks__D=FALSE -Dti_sysbios_knl_Task_numPriorities__D=16 -Dti_sysbios_knl_Task_checkStackFlag__D=TRUE -Dti_sysbios_knl_Task_initStackFlag__D=TRUE -Dti_sysbios_knl_Task_DISABLE_ALL_HOOKS -Dti_sysbios_knl_Clock_TICK_SOURCE=ti_sysbios_knl_Clock_TickSource_TIMER -Dti_sysbios_knl_Clock_TICK_MODE=ti_sysbios_knl_Clock_TickMode_PERIODIC -Dti_sysbios_hal_Core_delegate_getId=ti_sysbios_hal_CoreNull_getId__E -Dti_sysbios_hal_Core_delegate_interruptCore=ti_sysbios_hal_CoreNull_interruptCore__E -Dti_sysbios_hal_Core_delegate_lock=ti_sysbios_hal_CoreNull_lock__E -Dti_sysbios_hal_Core_delegate_unlock=ti_sysbios_hal_CoreNull_unlock__E -Dti_sysbios_hal_Core_numCores__D=1 -Dti_sysbios_hal_CoreNull_numCores__D=1 -Dti_sysbios_utils_Load_taskEnabled__D=TRUE -Dti_sysbios_utils_Load_swiEnabled__D=FALSE -Dti_sysbios_utils_Load_hwiEnabled__D=FALSE -Dti_sysbios_family_c28_Hwi_dispatcherSwiSupport__D=TRUE -Dti_sysbios_family_c28_Hwi_dispatcherTaskSupport__D=TRUE -Dti_sysbios_family_c28_Hwi_dispatcherAutoNestingSupport__D=TRUE -Dti_sysbios_family_c28_Hwi_dispatcherIrpTrackingSupport__D=TRUE -Dti_sysbios_knl_Semaphore_supportsEvents__D=FALSE -Dti_sysbios_knl_Semaphore_supportsPriority__D=TRUE -Dxdc_runtime_Log_DISABLE_ALL -Dti_sysbios_family_c28_Hwi_regsVCRC__D=FALSE -Dfar= 
 
 CCOPTS = -v28 -DLARGE_MODEL=1 -ml --float_support=fpu32 -q -mo  --program_level_compile -o3 -g  -Dti_sysbios_family_c28_Hwi_zeroLatencyIERMask__D=0U -Dti_sysbios_knl_Clock_stopCheckNext__D=FALSE -Dti_sysbios_knl_Task_minimizeLatency__D=FALSE
 
-BIOS_INC = -I"D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/"
+BIOS_INC = -I"C:/TexasInstruments/bios_6_83_00_18/packages/"
 ANNEX_INCS = 
-INCS = $(BIOS_INC) $(ANNEX_INCS) -I"D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/" -I"D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/" -I"../" -I"/packages//"  -ID:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include
+INCS = $(BIOS_INC) $(ANNEX_INCS) -I"C:/TexasInstruments/bios_6_83_00_18/packages/" -I"C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/" -I"../" -I"/packages//"  -IC:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include
 
-CC = D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000 -c $(CCOPTS)
-ASM = D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000 -c $(CCOPTS)
-AR = D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/ar2000 rq
+CC = C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000 -c $(CCOPTS)
+ASM = C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000 -c $(CCOPTS)
+AR = C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/ar2000 rq
 
-DEL = D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/../bin/rm -f
-CP = D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/../bin/cp -f
+DEL = C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/../bin/rm -f
+CP = C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core/packages/../bin/cp -f
 
 define RM
 	$(if $(wildcard $1),$(DEL) $1,:)
