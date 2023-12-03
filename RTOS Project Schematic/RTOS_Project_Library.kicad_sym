@@ -9,7 +9,7 @@
     (property "Footprint" "" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 0 0 0)
+    (property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/44/2168_Web.pdf" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_description" "Through-Beam Optical Sensor 20.0\" (508mm) Open Collector" (at 0 0 0)
