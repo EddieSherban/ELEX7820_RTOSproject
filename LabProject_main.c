@@ -22,7 +22,6 @@
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Swi.h>
 
-
 #include <Headers/F2837xD_device.h>
 
 //Swi handle defined in .cfg file:
@@ -81,11 +80,11 @@ int32_t count = 1;
 int sec = 0;                    //ES
 int soc0_adc_voltage = 0;
 int soc1_adc_voltage = 0;
+//declare global variables:
 
 /* ======== main ======== */
 Int main()
-{
-    // Locals
+{ 
     uint16_t i;
 
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
@@ -121,53 +120,28 @@ Int main()
 }
 
 /* ======== myTickFxn ======== */
-//Timer tick function t hat increments a counter and sets the isrFlag
+//Timer tick function that increments a counter and sets the isrFlag
 //Entered 100 times per second if PLL and Timer set up correctly
 Void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
-    //Swi_post(swi0);
     if(tickCount % 100 == 0) {
-        isrFlag = TRUE; //tell idle thread to do something 2 times per second
+        isrFlag = TRUE; //tell idle thread to do something once per second
     }
     if(tickCount % 500 == 0) {      //ES
         isrFlag2 = TRUE;
     }                               //ES
-
 }
 
 /* ======== myIdleFxn ======== */
 //Idle function that is called repeatedly from RTOS
 Void myIdleFxn(Void)
 {
-    // Locals
-    uint16_t i;
-
-    if(isrFlag == TRUE) {
-        isrFlag = FALSE;
-        //toggle blue LED:
-        GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1;
-        //PWM_no_dutycycle();
-        PWM_custom_dutycycle(0.7);
-    }
-
-    // Generate waveform:
-    //Rad = 0.0f
-    for(i=0; i < RFFT_SIZE; i++){
-        RFFTin1Buff[i] = sin(Rad) + cos(Rad*2.3567); //Real input signal
-        RFFTin1Buff[i] = sin(2 * PI * i * bin / RFFT_SIZE);
-        Rad = Rad + RadStep;
-    }
-
-    RFFT_f32_sincostable(hnd_rfft);         //Calculate twiddle factor
-    RFFT_f32(hnd_rfft);         //calculate real FFT
-    RFFT_f32_mag(hnd_rfft);     //calculate magnitude
-    RFFT_f32_phase(hnd_rfft);   //calculate phase
-
-    if(bin == RFFT_SIZE/2 - 1)
-        bin = 0;
-    else
-        bin++;
+   if(isrFlag == TRUE) {
+       isrFlag = FALSE;
+       //toggle blue LED:
+       GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1;
+   }
 }
 
 Void myIdleFxn2(Void)       //ES
@@ -176,10 +150,8 @@ Void myIdleFxn2(Void)       //ES
         isrFlag2 = FALSE;
         sec++;
         //print time in seconds to SysMin
-        //System_printf("Timer(sec) = %i \n",sec);
-        PWM_custom_dutycycle(0.2);
+        System_printf("Timer(sec) = %i \n",sec);
     }
-
 }                           //ES
 
 Void adc_hwi(Void)
@@ -191,26 +163,34 @@ Void adc_hwi(Void)
     System_printf("adca3 voltage: %i \n",soc1_adc_voltage);
 }
 
-Void calc_FFT_swi4(Void)
-{
- /*   //determine if tickCount is a prime:
-    UInt counter, flag;
-
-    counter = 2;
-    flag = 1;
-    while(counter < tickCount) {
-        if(tickCount % counter == 0){
-            flag = 0;
-        }
-        counter++;
-    }
-    if(flag == 1 && tickCount != 1){
-        GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1; //toggle red LED
-        //System_printf("tickCount: %u\n", tickCount);
-    }*/
-}
-
 Void button_press(Void)
 {
+    EALLOW;
+    XintRegs.XINT1CR.bit.ENABLE = 0;    //disable xint1 interrupt
+    EDIS;
+    System_printf("Success! \n");
+    XbarRegs.XBARCLR2.bit.INPUT4 = 1;   //INPUT4 X-BAR Flag Clear
+    EALLOW;
+    XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
+    EDIS;
+}
 
+
+Void calc_FFT_swi4(Void)
+{
+    /*   //determine if tickCount is a prime:
+       UInt counter, flag;
+
+       counter = 2;
+       flag = 1;
+       while(counter < tickCount) {
+           if(tickCount % counter == 0){
+               flag = 0;
+           }
+           counter++;
+       }
+       if(flag == 1 && tickCount != 1){
+           GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1; //toggle red LED
+           //System_printf("tickCount: %u\n", tickCount);
+       }*/
 }

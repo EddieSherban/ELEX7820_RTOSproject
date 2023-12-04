@@ -191,6 +191,7 @@ SECTIONS
 
 	   /*FPUmathTables    : > RAMGS8,    PAGE = 1*/
 
+
     /* The following section definitions are required when using the IPC API Drivers */
     GROUP : > CPU1TOCPU2RAM, PAGE = 1
     {

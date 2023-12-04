@@ -191,6 +191,7 @@ Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packa
 Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_pwm.h
 Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_adc.h
+Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_gpio.h
 
 ../Lab_proj_Idle_DevInit.c:
 
@@ -573,4 +574,6 @@ D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/
 ../periph/F28379DZTQ/F28379D_pwm.h:
 
 ../periph/F28379DZTQ/F28379D_adc.h:
+
+../periph/F28379DZTQ/F28379D_gpio.h:
 

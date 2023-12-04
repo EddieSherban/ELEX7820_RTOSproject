@@ -4,18 +4,18 @@
     <units>
     </units>
     <sources>
-        <srcFile name="package/cfg/Lab_proj_Idle_p28FP.c"/>
+        <srcFile name="package/cfg/Lab2Idle_p28FP.c"/>
     </sources>
     <configscripts>
-        <srcFile name="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"/>
+        <srcFile name="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject_updated/Lab2Idle.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
         <srcFile name="package/package.xdc.dep" src="package.xdc"/>
-        <srcFile name="package/cfg/Lab_proj_Idle_p28FP.mak" src="package.bld"/>
-        <srcFile name="package/cfg/Lab_proj_Idle_p28FP.o28FP.dep" src="package/cfg/Lab_proj_Idle_p28FP.c"/>
-        <srcFile name="package/cfg/Lab_proj_Idle_p28FP.dep" src="package/cfg/Lab_proj_Idle_p28FP.cfg"/>
-        <srcFile name="package/cfg/Lab_proj_Idle.x28FP.mak" src="package.bld"/>
+        <srcFile name="package/cfg/Lab2Idle_p28FP.mak" src="package.bld"/>
+        <srcFile name="package/cfg/Lab2Idle_p28FP.o28FP.dep" src="package/cfg/Lab2Idle_p28FP.c"/>
+        <srcFile name="package/cfg/Lab2Idle_p28FP.dep" src="package/cfg/Lab2Idle_p28FP.cfg"/>
+        <srcFile name="package/cfg/Lab2Idle.x28FP.mak" src="package.bld"/>
         <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
     </makefiles>
     <targets>
@@ -36,34 +36,34 @@
     <libraries>
     </libraries>
     <configurations>
-    <configuration name="Lab_proj_Idle"
-        pname="Lab_proj_Idle.p28FP"
+    <configuration name="Lab2Idle"
+        pname="Lab2Idle.p28FP"
         target="ti.targets.C28_float"
         platform="ti.platforms.tms320x28:TMS320F28379D"
         profile="release"
         isPartial="false"
-        xCfgScript="package/cfg/Lab_proj_Idle_p28FP.cfg"
-        xCfgPrefix="package/cfg/Lab_proj_Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"
+        xCfgScript="package/cfg/Lab2Idle_p28FP.cfg"
+        xCfgPrefix="package/cfg/Lab2Idle_p28FP"
+        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject_updated/Lab2Idle.cfg"
         cfgArgs="null"
         />
     </configurations>
     <executables>
-    <executable name="Lab_proj_Idle"
-        pname="Lab_proj_Idle.x28FP"
+    <executable name="Lab2Idle"
+        pname="Lab2Idle.x28FP"
         target="ti.targets.C28_float"
         platform="ti.platforms.tms320x28:TMS320F28379D"
         profile="release"
-        xCfgScript="package/cfg/Lab_proj_Idle_p28FP.cfg"
-        xCfgPrefix="package/cfg/Lab_proj_Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"
+        xCfgScript="package/cfg/Lab2Idle_p28FP.cfg"
+        xCfgPrefix="package/cfg/Lab2Idle_p28FP"
+        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject_updated/Lab2Idle.cfg"
         cfgArgs="null"
         />
     </executables>
     <tests>
-    <test exeName="Lab_proj_Idle.x28FP"
+    <test exeName="Lab2Idle.x28FP"
         args=""
-        groupName="Lab_proj_Idle.x28FP"
+        groupName="Lab2Idle.x28FP"
         refOutput="undefined"
         refExitCode="0"
         execArgs=""
