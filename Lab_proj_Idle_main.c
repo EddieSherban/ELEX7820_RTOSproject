@@ -20,7 +20,6 @@
 
 //function prototypes:
 extern void DeviceInit(void);
-extern void config_spi(void);
 
 //declare global variables:
 volatile Bool isrFlag = FALSE; //flag used by idle function
@@ -37,7 +36,6 @@ int main()
 
     //initialization:
     DeviceInit(); //initialize processor
-    config_spi();
 
     //jump to RTOS (does not return):
     BIOS_start();

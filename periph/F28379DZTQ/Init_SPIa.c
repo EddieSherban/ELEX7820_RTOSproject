@@ -1,6 +1,14 @@
+// Filename: SPIa_Init.c
+// Description: SPI-A initialization
+// Version: 1.0
+// Target: TMS320F28379D
+// Author: Felix Serban
+// Date: 03 Dec 2023
+// Modified:
+
 #include <Headers/F2837xD_device.h>
 
-void config_spi(void)
+void Init_SPIa(void)
 {
     EALLOW;
 
@@ -21,12 +29,13 @@ void config_spi(void)
     GpioCtrlRegs.GPBQSEL2.bit.GPIO61 = 0b11;
 
     // Configure SPI pins
-    // Peripheral group mux
+    // ... Peripheral group mux 2
     GpioCtrlRegs.GPBGMUX2.bit.GPIO58 = 0b11;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO59 = 0b11;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO60 = 0b11;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO61 = 0b11;
-    // Mux 2
+
+    // ... Mux 2
     GpioCtrlRegs.GPBMUX2.bit.GPIO58 = 0b11;
     GpioCtrlRegs.GPBMUX2.bit.GPIO59 = 0b11;
     GpioCtrlRegs.GPBMUX2.bit.GPIO60 = 0b11;
