@@ -26,12 +26,17 @@
 #include <Headers/F2837xD_device.h>
 
 //Swi handle defined in .cfg file:
-//extern const Swi_Handle swi0;
+extern const Swi_Handle swi0;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
 #include "dsp/fpu_types.h"
 #include <math.h>
+
+//peripherals
+#include "periph/F28379DZTQ/F28379D_i2c.h"
+#include "periph/F28379DZTQ/F28379D_pwm.h"
+#include "periph/F28379DZTQ/F28379D_adc.h"
 
 //function prototypes:
 extern void DeviceInit(void);
@@ -122,12 +127,13 @@ Void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
     //Swi_post(swi0);
-    if(tickCount % 50 == 0) {
+    if(tickCount % 100 == 0) {
         isrFlag = TRUE; //tell idle thread to do something 2 times per second
     }
-    if(tickCount % 100 == 0) {      //ES
+    if(tickCount % 500 == 0) {      //ES
         isrFlag2 = TRUE;
     }                               //ES
+
 }
 
 /* ======== myIdleFxn ======== */
@@ -141,6 +147,8 @@ Void myIdleFxn(Void)
         isrFlag = FALSE;
         //toggle blue LED:
         GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1;
+        //PWM_no_dutycycle();
+        PWM_custom_dutycycle(0.7);
     }
 
     // Generate waveform:
@@ -168,7 +176,8 @@ Void myIdleFxn2(Void)       //ES
         isrFlag2 = FALSE;
         sec++;
         //print time in seconds to SysMin
-        System_printf("Timer(sec) = %i \n",sec);
+        //System_printf("Timer(sec) = %i \n",sec);
+        PWM_custom_dutycycle(0.2);
     }
 
 }                           //ES
@@ -176,7 +185,7 @@ Void myIdleFxn2(Void)       //ES
 Void adc_hwi(Void)
 {
     soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;   //result for ADCINA5
-    //soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+    soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
     System_printf("adca5 voltage: %i \n",soc0_adc_voltage);
     System_printf("adca3 voltage: %i \n",soc1_adc_voltage);
@@ -201,17 +210,7 @@ Void calc_FFT_swi4(Void)
     }*/
 }
 
-Void table_tilt(Void)
-{
-
-}
-
-Void clamp1_edges(Void)
-{
-
-}
-
-Void clamp2_edges(Void)
+Void button_press(Void)
 {
 
 }
