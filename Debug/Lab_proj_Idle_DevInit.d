@@ -50,6 +50,148 @@ Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F
 Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xbar.h
 Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xint.h
 Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_can.h
+Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_i2c.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/ctype.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_isfuncdcl.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/BIOS.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/std.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/std.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/C28_float.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/xdc.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/package/package.defs.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/BIOS__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/package/package.defs.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Memory.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/package/Memory_HeapProxy.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/package/Main_Module_GateProxy.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/BIOS__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Task.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Task__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/package.defs.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__prologue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Text.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Queue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITaskSupport.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/package/package.defs.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Clock.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITimer.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Queue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Swi.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Queue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITimer.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Task_SupportProxy.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITaskSupport.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Task__epilogue.h
+Lab_proj_Idle_DevInit.obj: D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Task_SupportProxy.h
+Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_pwm.h
+Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_adc.h
+Lab_proj_Idle_DevInit.obj: ../periph/F28379DZTQ/F28379D_gpio.h
 
 ../Lab_proj_Idle_DevInit.c:
 
@@ -150,4 +292,288 @@ D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xbar.h:
 D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_xint.h:
 
 D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Headers/F2837xD_can.h:
+
+../periph/F28379DZTQ/F28379D_i2c.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/ctype.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include/_isfuncdcl.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/BIOS.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/std.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/std.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/targets/C28_float.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/xdc.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types__prologue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/package/package.defs.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types__epilogue.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/BIOS__prologue.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/package/package.defs.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error__prologue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Memory.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/package/Memory_HeapProxy.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/package/Main_Module_GateProxy.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error__epilogue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/BIOS__epilogue.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Task.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Task__prologue.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/package.defs.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__prologue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__prologue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__epilogue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__epilogue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__prologue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Text.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__epilogue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IHeap.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Queue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITaskSupport.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/package/package.defs.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Clock.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITimer.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Queue.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Swi.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Queue.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Clock_TimerProxy.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITimer.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Task_SupportProxy.h:
+
+D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/interfaces/ITaskSupport.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/Task__epilogue.h:
+
+D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages/ti/sysbios/knl/package/Task_SupportProxy.h:
+
+../periph/F28379DZTQ/F28379D_pwm.h:
+
+../periph/F28379DZTQ/F28379D_adc.h:
+
+../periph/F28379DZTQ/F28379D_gpio.h:
 

@@ -1,7 +1,7 @@
 #
-_XDCBUILDCOUNT = 
+_XDCBUILDCOUNT = 0
 ifneq (,$(findstring path,$(_USEXDCENV_)))
-override XDCPATH = D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages;D:/E_Eng/ELEX7820/Labs/Lab2/Lab2/.config
+override XDCPATH = D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages;D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject_updated/.config
 override XDCROOT = D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core
 override XDCBUILDCFG = ./config.bld
 endif
@@ -11,6 +11,6 @@ override XDCTARGETS =
 endif
 #
 ifeq (0,1)
-PKGPATH = D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages;D:/E_Eng/ELEX7820/Labs/Lab2/Lab2/.config;D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages;..
+PKGPATH = D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages;D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject_updated/.config;D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core/packages;..
 HOSTOS = Windows
 endif
