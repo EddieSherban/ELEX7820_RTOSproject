@@ -7,5 +7,5 @@
 #       or equal to the generated config header
 #
 linker.cmd: package/cfg/Lab2Idle_p28FP.xdl
-	$(SED) 's"^\"\(package/cfg/Lab2Idle_p28FPcfg.cmd\)\"$""\"D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject_updated/Debug/configPkg/\1\""' package/cfg/Lab2Idle_p28FP.xdl > $@
+	$(SED) 's"^\"\(package/cfg/Lab2Idle_p28FPcfg.cmd\)\"$""\"D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Debug/configPkg/\1\""' package/cfg/Lab2Idle_p28FP.xdl > $@
 	-$(SETDATE) -r:max package/cfg/Lab2Idle_p28FP.h compiler.opt compiler.opt.defs

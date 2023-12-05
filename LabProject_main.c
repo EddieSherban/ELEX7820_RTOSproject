@@ -21,11 +21,19 @@
 #include <xdc/runtime/System.h>
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Swi.h>
+#include <ti/sysbios/knl/Task.h>
+#include <ti/sysbios/knl/Semaphore.h>
 
 #include <Headers/F2837xD_device.h>
 
 //Swi handle defined in .cfg file:
 extern const Swi_Handle swi0;
+
+//Task handle defined in .cfg file:
+extern const Task_Handle Tsk0;
+
+//Semaphore handle fdefined in .cfg file:
+extern const Semaphore_Handle mySem;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -42,6 +50,7 @@ extern void DeviceInit(void);
 
 //declare global variables:
 float RFFTin1Buff[RFFT_SIZE];
+float RFFTin2Buff[RFFT_SIZE];
 volatile Bool isrFlag = FALSE; //flag used by idle function
 volatile Bool isrFlag2 = FALSE; //ES
 volatile UInt tickCount = 0; //counter incremented by timer interrupt
@@ -119,7 +128,8 @@ Int main()
     return(0);
 }
 
-/* ======== myTickFxn ======== */
+/* ======== TIMER ISR ======== */
+
 //Timer tick function that increments a counter and sets the isrFlag
 //Entered 100 times per second if PLL and Timer set up correctly
 Void myTickFxn(UArg arg)
@@ -130,10 +140,13 @@ Void myTickFxn(UArg arg)
     }
     if(tickCount % 500 == 0) {      //ES
         isrFlag2 = TRUE;
+        Semaphore_post(mySem);
     }                               //ES
 }
+/* ======== TIMER ISR ======== */
 
-/* ======== myIdleFxn ======== */
+
+/* ======== IDLE1 ======== */
 //Idle function that is called repeatedly from RTOS
 Void myIdleFxn(Void)
 {
@@ -144,6 +157,10 @@ Void myIdleFxn(Void)
    }
 }
 
+/* ======== IDLE1 ======== */
+
+
+/* ======== IDLE2 ======== */
 Void myIdleFxn2(Void)       //ES
 {
     if(isrFlag2 == TRUE) {
@@ -153,29 +170,36 @@ Void myIdleFxn2(Void)       //ES
         System_printf("Timer(sec) = %i \n",sec);
     }
 }                           //ES
+/* ======== IDLE2 ======== */
 
+
+/* ======== HWIs ======== */
+//adc HWI (1st Priority)
 Void adc_hwi(Void)
 {
     soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;   //result for ADCINA5
     soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
-    System_printf("adca5 voltage: %i \n",soc0_adc_voltage);
-    System_printf("adca3 voltage: %i \n",soc1_adc_voltage);
+    System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
+    System_printf("adca5 voltage: %i \n",soc1_adc_voltage);
 }
 
+//Reset HWI (2nd Priority)
 Void button_press(Void)
 {
     EALLOW;
     XintRegs.XINT1CR.bit.ENABLE = 0;    //disable xint1 interrupt
     EDIS;
-    System_printf("Success! \n");
+
     XbarRegs.XBARCLR2.bit.INPUT4 = 1;   //INPUT4 X-BAR Flag Clear
     EALLOW;
     XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
     EDIS;
 }
+/* ======== HWIs ======== */
 
 
+/* ======== SWIs ======== */
 Void calc_FFT_swi4(Void)
 {
     /*   //determine if tickCount is a prime:
@@ -194,3 +218,19 @@ Void calc_FFT_swi4(Void)
            //System_printf("tickCount: %u\n", tickCount);
        }*/
 }
+
+
+/* ======== SWIs ======== */
+
+/* ======== TASKs ======== */
+Void myTskFxn(Void)
+{
+    while(TRUE){
+        Semaphore_pend(mySem, BIOS_WAIT_FOREVER);   //wait for semaphore to be posted
+        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;      //toggle red LED
+        GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;
+    }
+}
+
+
+/* ======== TASKs ======== */

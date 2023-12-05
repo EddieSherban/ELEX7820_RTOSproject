@@ -1,6 +1,6 @@
 #
 # This file was generated based on the configuration script:
-#     D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject_updated\Lab2Idle.cfg
+#     D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject\Lab2Idle.cfg
 #
 # This makefile may be included in other makefiles that need to build
 # the libraries containing the compiled source files generated as
@@ -14,7 +14,7 @@
 #
 # The absolute path to the generated source directory (at the time the
 # sources were generated) is:
-#    D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject_updated\src
+#    D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject\src
 #
 GEN_SRC_DIR ?= ../src
 
