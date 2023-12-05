@@ -27,13 +27,27 @@
 #include <Headers/F2837xD_device.h>
 
 //Swi handle defined in .cfg file:
-extern const Swi_Handle swi0;
+extern const Swi_Handle swi0;   //calc_FFT_swi4
+extern const Swi_Handle swi1;   //Menu_swi5
+extern const Swi_Handle swi2;   //Record_swi6
+extern const Swi_Handle swi3;   //PvP_swi7
 
 //Task handle defined in .cfg file:
-extern const Task_Handle Tsk0;
+extern const Task_Handle Tsk0;  //print_tsk8
+extern const Task_Handle Tsk1;  //wait_tsk9
+extern const Task_Handle Tsk2;  //start_sampling_tsk4
+extern const Task_Handle Tsk3;  //pwm_tsk10
+extern const Task_Handle Tsk5;  //print_message_tsk7
+extern const Task_Handle Tsk999;//Testing task
 
 //Semaphore handle fdefined in .cfg file:
-extern const Semaphore_Handle mySem;
+extern const Semaphore_Handle testing_sem;
+extern const Semaphore_Handle state_sem;
+extern const Semaphore_Handle wait_sem;
+extern const Semaphore_Handle pwm_sem;
+extern const Semaphore_Handle sampling_sem;
+extern const Semaphore_Handle print_sem;
+extern const Semaphore_Handle message_sem;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -140,27 +154,22 @@ Void myTickFxn(UArg arg)
     }
     if(tickCount % 500 == 0) {      //ES
         isrFlag2 = TRUE;
-        Semaphore_post(mySem);
+        Semaphore_post(testing_sem);
     }                               //ES
 }
 /* ======== TIMER ISR ======== */
 
 
-/* ======== IDLE1 ======== */
+/* ======== IDLE FXNS ======== */
 //Idle function that is called repeatedly from RTOS
 Void myIdleFxn(Void)
 {
    if(isrFlag == TRUE) {
        isrFlag = FALSE;
-       //toggle blue LED:
-       GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1;
+       GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1; //toggle blue LED:
    }
 }
 
-/* ======== IDLE1 ======== */
-
-
-/* ======== IDLE2 ======== */
 Void myIdleFxn2(Void)       //ES
 {
     if(isrFlag2 == TRUE) {
@@ -170,7 +179,7 @@ Void myIdleFxn2(Void)       //ES
         System_printf("Timer(sec) = %i \n",sec);
     }
 }                           //ES
-/* ======== IDLE2 ======== */
+/* ======== IDLE FXNS ======== */
 
 
 /* ======== HWIs ======== */
@@ -219,18 +228,61 @@ Void calc_FFT_swi4(Void)
        }*/
 }
 
+Void Menu_swi5(Void)
+{
+    //Semaphore_post(testing_sem);
+
+}
+
+Void Record_swi6(Void)
+{
+
+}
+
+Void PvP_swi7(Void)
+{
+
+}
 
 /* ======== SWIs ======== */
 
 /* ======== TASKs ======== */
-Void myTskFxn(Void)
+Void Testing(Void) //priority 1 (lowest task priority)
 {
     while(TRUE){
-        Semaphore_pend(mySem, BIOS_WAIT_FOREVER);   //wait for semaphore to be posted
-        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;      //toggle red LED
+        Semaphore_pend(testing_sem, BIOS_WAIT_FOREVER);   //wait for semaphore to be posted
+        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;    //toggle red LED
         GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;
     }
 }
 
+Void Print_tsk8(Void){
+    while(TRUE){
+        Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
+    }
+}
 
+Void wait_tsk9(Void){
+    while(TRUE){
+        Semaphore_pend(wait_sem, BIOS_WAIT_FOREVER);
+    }
+}
+
+Void Start_sampling_tsk4(Void){
+    while(TRUE){
+        Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
+    }
+}
+
+Void pwm_tsk10(Void){
+    while(TRUE){
+        Semaphore_pend(pwm_sem, BIOS_WAIT_FOREVER);
+    }
+}
+
+Void print_message_tsk7(Void){
+    while(TRUE){
+        Semaphore_pend(message_sem, BIOS_WAIT_FOREVER);
+    }
+}
 /* ======== TASKs ======== */
