@@ -10,6 +10,7 @@ GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt"
 GEN_CMDS__FLAG := -l"configPkg/linker.cmd" 
 
 ORDERED_OBJS += \
+"./DelayUs.obj" \
 "./F2837xD_GlobalVariableDefs.obj" \
 "./LabProject_DevInit.obj" \
 "./LabProject_main.obj" \
@@ -135,43 +136,43 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-LabProjectRev2.out \
+labproject.out \
 
 EXE_OUTPUTS__QUOTED += \
-"LabProjectRev2.out" \
+"labproject.out" \
 
 BIN_OUTPUTS += \
-LabProjectRev2.hex \
+labproject.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"LabProjectRev2.hex" \
+"labproject.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "LabProjectRev2.out"
+	@$(MAKE) --no-print-directory -Onone "labproject.out"
 
 # Tool invocations
-LabProjectRev2.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+labproject.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --c11 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"LabProjectRev2.map" --stack_size=0x200 --warn_sections -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="LabProjectRev2_linkInfo.xml" --rom_model -o "LabProjectRev2.out" $(ORDERED_OBJS)
+	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --c11 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"labproject.map" --stack_size=0x200 --warn_sections -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="labproject_linkInfo.xml" --rom_model -o "labproject.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-LabProjectRev2.hex: $(EXE_OUTPUTS)
+labproject.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: C2000 Hex Utility'
-	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "LabProjectRev2.hex" $(EXE_OUTPUTS__QUOTED)
+	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "labproject.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_i2c.obj" "periph\F28379DZTQ\F28379D_pwm.obj" 
+	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_i2c.obj" "periph\F28379DZTQ\F28379D_pwm.obj" 
 	-$(RM) "F2837xD_GlobalVariableDefs.d" "LabProject_DevInit.d" "LabProject_main.d" "dsp\RFFT_f32_sincostable.d" "periph\F28379DZTQ\F28379D_adc.d" "periph\F28379DZTQ\F28379D_gpio.d" "periph\F28379DZTQ\F28379D_i2c.d" "periph\F28379DZTQ\F28379D_pwm.d" 
-	-$(RM) "dsp\RFFT_f32.d" "dsp\RFFT_f32_mag.d" "dsp\RFFT_f32_phase.d" 
+	-$(RM) "DelayUs.d" "dsp\RFFT_f32.d" "dsp\RFFT_f32_mag.d" "dsp\RFFT_f32_phase.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

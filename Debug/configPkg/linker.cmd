@@ -9,8 +9,8 @@
  */
 
 
--l"D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject_updated\Debug\configPkg\package\cfg\Lab2Idle_p28FP.o28FP"
--l"D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject_updated\src\sysbios\sysbios.a28FP"
+-l"D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject\Debug\configPkg\package\cfg\Lab2Idle_p28FP.o28FP"
+-l"D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject\src\sysbios\sysbios.a28FP"
 -l"D:\E_Eng\ELEX7820\tools\sysbios\bios_6_83_00_18\packages\ti\targets\rts2800\lib\ti.targets.rts2800.a28FP"
 -l"D:\E_Eng\ELEX7820\tools\sysbios\bios_6_83_00_18\packages\ti\targets\rts2800\lib\boot.a28FP"
 -l"D:\E_Eng\ELEX7820\tools\sysbios\bios_6_83_00_18\packages\ti\catalog\c2800\initF2837x\lib\Boot.a28FP"
