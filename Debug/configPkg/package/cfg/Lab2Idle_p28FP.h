@@ -23,7 +23,43 @@ extern const ti_sysbios_knl_Swi_Handle swi0;
 extern const ti_sysbios_knl_Task_Handle task0;
 
 #include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle mySem;
+extern const ti_sysbios_knl_Semaphore_Handle testing_sem;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle task1;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle task2;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle state_sem;
+
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle swi1;
+
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle swi2;
+
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle swi3;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle task3;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle task999;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle pwm_sem;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle sampling_sem;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle wait_sem;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle print_sem;
 
 extern int xdc_runtime_Startup__EXECFXN__C;
 
