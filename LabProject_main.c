@@ -40,14 +40,18 @@ extern const Task_Handle Tsk3;  //pwm_tsk10
 extern const Task_Handle Tsk5;  //print_message_tsk7
 extern const Task_Handle Tsk999;//Testing task
 
-//Semaphore handle fdefined in .cfg file:
+//Semaphore handles defined in .cfg file:
 extern const Semaphore_Handle testing_sem;
 extern const Semaphore_Handle state_sem;
 extern const Semaphore_Handle wait_sem;
 extern const Semaphore_Handle pwm_sem;
 extern const Semaphore_Handle sampling_sem;
 extern const Semaphore_Handle print_sem;
-extern const Semaphore_Handle message_sem;
+//message semaphores
+extern const Semaphore_Handle hello_msg_sem;
+extern const Semaphore_Handle option_msg_sem;
+extern const Semaphore_Handle start_recording_msg_sem;
+extern const Semaphore_Handle countdown_msg_sem
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -262,6 +266,14 @@ Void Print_tsk8(Void){
     }
 }
 
+
+Void print_message_tsk7(Void){
+    while(TRUE){
+        Semaphore_pend(hello_message_sem, BIOS_WAIT_FOREVER);
+        //Semaphore_pend();
+    }
+}
+
 Void wait_tsk9(Void){
     while(TRUE){
         Semaphore_pend(wait_sem, BIOS_WAIT_FOREVER);
@@ -280,9 +292,4 @@ Void pwm_tsk10(Void){
     }
 }
 
-Void print_message_tsk7(Void){
-    while(TRUE){
-        Semaphore_pend(message_sem, BIOS_WAIT_FOREVER);
-    }
-}
 /* ======== TASKs ======== */
