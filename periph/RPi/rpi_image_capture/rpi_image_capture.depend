@@ -1,0 +1,1534 @@
+# depslib dependency file v1.0
+1701839972 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/lcd.cpp
+	"WiringPi/wiringPi/wiringPi.h"
+	"WiringPi/wiringPi/wiringPiI2C.h"
+	<stdlib.h>
+	<stdio.h>
+	<string>
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPi.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiI2C.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/ds1302.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stdarg.h>
+	<wiringPi.h>
+	"ds1302.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/ds1302.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/gertboard.c
+	<stdio.h>
+	<stdint.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<linux/spi/spidev.h>
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"gertboard.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/gertboard.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/lcd.c
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<wiringPi.h>
+	"lcd.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/lcd.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/lcd128x64.c
+	<stdio.h>
+	<stdlib.h>
+	<wiringPi.h>
+	"font.h"
+	"lcd128x64.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/font.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/lcd128x64.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/maxdetect.c
+	<sys/time.h>
+	<stdio.h>
+	<wiringPi.h>
+	"maxdetect.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/maxdetect.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piFace.c
+	<stdio.h>
+	<stdint.h>
+	<wiringPi.h>
+	<mcp23s17.h>
+	"piFace.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piFace.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piFaceOld.c
+	<stdio.h>
+	<stdint.h>
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"../wiringPi/mcp23x0817.h"
+	"piFace.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23x0817.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piGlow.c
+	<wiringPi.h>
+	<sn3218.h>
+	"piGlow.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piGlow.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piNes.c
+	<wiringPi.h>
+	"piNes.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/piNes.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/scrollPhat.c
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<time.h>
+	<wiringPiI2C.h>
+	"scrollPhatFont.h"
+	"scrollPhat.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/scrollPhatFont.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/devLib/scrollPhat.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink-thread.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink12.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink12drcs.c
+	<stdio.h>
+	<wiringPi.h>
+	<drcSerial.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink6drcs.c
+	<stdio.h>
+	<wiringPi.h>
+	<drcSerial.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink8-drcn.c
+	<stdio.h>
+	<wiringPi.h>
+	<drcNet.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/blink8.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/clock.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<time.h>
+	<math.h>
+	<wiringPi.h>
+	<lcd128x64.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/delayTest.c
+	<stdio.h>
+	<unistd.h>
+	<sys/time.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/ds1302.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<ds1302.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/7segments.c
+	<wiringPi.h>
+	<stdio.h>
+	<time.h>
+	<ctype.h>
+	<string.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/buttons.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/gertboard.c
+	<stdio.h>
+	<sys/ioctl.h>
+	<stdlib.h>
+	<math.h>
+	<wiringPi.h>
+	<gertboard.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/record.c
+	<stdio.h>
+	<sys/time.h>
+	<wiringPi.h>
+	<gertboard.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/temperature.c
+	<stdio.h>
+	<wiringPi.h>
+	<gertboard.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/voltmeter.c
+	<stdio.h>
+	<wiringPi.h>
+	<gertboard.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/Gertboard/vumeter.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	<wiringPi.h>
+	<gertboard.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/isr-osc.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/isr.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/lcd-adafruit.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<mcp23017.h>
+	<lcd.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/lcd.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<lcd.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/lowPower.c
+	<stdio.h>
+	<time.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/max31855.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<max31855.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/nes.c
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<wiringPi.h>
+	<piNes.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/okLed.c
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<fcntl.h>
+	<unistd.h>
+	<math.h>
+	<wiringPi.h>
+	<softPwm.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiFace/blink.c
+	<stdio.h>
+	<wiringPi.h>
+	<piFace.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiFace/buttons.c
+	<stdio.h>
+	<wiringPi.h>
+	<piFace.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiFace/ladder.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<math.h>
+	<wiringPi.h>
+	<piFace.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiFace/metro.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<wiringPi.h>
+	<piFace.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiFace/motor.c
+	<wiringPi.h>
+	<piFace.h>
+	<softPwm.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiFace/reaction.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<wiringPi.h>
+	<piFace.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiGlow/piglow.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<wiringPi.h>
+	<piGlow.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiGlow/piGlow0.c
+	<wiringPi.h>
+	<sn3218.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/PiGlow/piGlow1.c
+	<stdio.h>
+	<stdlib.h>
+	<poll.h>
+	<wiringPi.h>
+	<piGlow.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/pwm.c
+	<wiringPi.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/q2w/binary.c
+	<stdio.h>
+	<wiringPi.h>
+	<mcp23017.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/q2w/blink-io.c
+	<stdio.h>
+	<wiringPi.h>
+	<mcp23017.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/q2w/blink.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/q2w/bright.c
+	<stdio.h>
+	<wiringPi.h>
+	<pcf8591.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/q2w/button.c
+	<stdio.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/q2w/volts.c
+	<stdio.h>
+	<wiringPi.h>
+	<pcf8591.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/rht03.c
+	<stdio.h>
+	<wiringPi.h>
+	<maxdetect.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/scrollPhat/scphat.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<string.h>
+	<wiringPi.h>
+	<scrollPhat.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/scrollPhat/test.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<string.h>
+	<scrollPhat.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/serialRead.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<wiringSerial.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/serialTest.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<wiringPi.h>
+	<wiringSerial.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/servo.c
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<wiringPi.h>
+	<softServo.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/softPwm.c
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<wiringPi.h>
+	<softPwm.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/softTone.c
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<wiringPi.h>
+	<softTone.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/speed.c
+	<wiringPi.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/spiSpeed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<stdint.h>
+	<string.h>
+	<errno.h>
+	<wiringPi.h>
+	<wiringPiSPI.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/examples/wfi.c
+	<stdio.h>
+	<stdlib.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/gpio/gpio.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<ctype.h>
+	<string.h>
+	<unistd.h>
+	<errno.h>
+	<fcntl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<wiringPi.h>
+	<wpiExtensions.h>
+	<gertboard.h>
+	<piFace.h>
+	"../version.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/version.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/gpio/readall.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<ctype.h>
+	<string.h>
+	<unistd.h>
+	<errno.h>
+	<fcntl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<wiringPi.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/ads1115.c
+	<byteswap.h>
+	<stdio.h>
+	<stdint.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	"ads1115.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/ads1115.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/bmp180.c
+	<unistd.h>
+	<stdint.h>
+	<stdio.h>
+	<math.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"bmp180.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/bmp180.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/drcNet.c
+	<stdio.h>
+	<stdint.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<string.h>
+	<errno.h>
+	<crypt.h>
+	"wiringPi.h"
+	"drcNet.h"
+	"../wiringPiD/drcNetCmd.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/drcNet.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/drcNetCmd.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/drcSerial.c
+	<stdio.h>
+	<time.h>
+	<string.h>
+	<errno.h>
+	"wiringPi.h"
+	"wiringSerial.h"
+	"drcSerial.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringSerial.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/drcSerial.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/ds18b20.c
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<stdint.h>
+	<stdio.h>
+	<string.h>
+	<malloc.h>
+	<ctype.h>
+	"wiringPi.h"
+	"ds18b20.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/ds18b20.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/htu21d.c
+	<unistd.h>
+	<stdint.h>
+	<stdio.h>
+	<math.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"htu21d.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/htu21d.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/max31855.c
+	<byteswap.h>
+	<stdint.h>
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"max31855.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/max31855.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/max5322.c
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"max5322.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/max5322.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23008.c
+	<stdio.h>
+	<pthread.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"mcp23x0817.h"
+	"mcp23008.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23008.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23016.c
+	<stdio.h>
+	<pthread.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"mcp23016.h"
+	"mcp23016reg.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23016.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23016reg.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23017.c
+	<stdio.h>
+	<pthread.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"mcp23x0817.h"
+	"mcp23017.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23017.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23s08.c
+	<stdio.h>
+	<stdint.h>
+	"wiringPi.h"
+	"wiringPiSPI.h"
+	"mcp23x0817.h"
+	"mcp23s08.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiSPI.h
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23s08.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23s17.c
+	<stdio.h>
+	<stdint.h>
+	"wiringPi.h"
+	"wiringPiSPI.h"
+	"mcp23x0817.h"
+	"mcp23s17.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23s17.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp3002.c
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"mcp3002.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp3002.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp3004.c
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"mcp3004.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp3004.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp3422.c
+	<stdio.h>
+	<unistd.h>
+	<stdint.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	"mcp3422.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp3422.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp4802.c
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"mcp4802.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp4802.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/pcf8574.c
+	<stdio.h>
+	<pthread.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"pcf8574.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/pcf8574.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/pcf8591.c
+	<unistd.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+	"pcf8591.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/pcf8591.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/piHiPri.c
+	<sched.h>
+	<string.h>
+	"wiringPi.h"
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/piThread.c
+	<pthread.h>
+	"wiringPi.h"
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/pseudoPins.c
+	<unistd.h>
+	<sys/types.h>
+	<sys/mman.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<wiringPi.h>
+	"pseudoPins.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/pseudoPins.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/rht03.c
+	<sys/time.h>
+	<stdio.h>
+	<stdio.h>
+	<time.h>
+	"wiringPi.h"
+	"rht03.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/rht03.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/sn3218.c
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	"sn3218.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/sn3218.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/softPwm.c
+	<stdio.h>
+	<malloc.h>
+	<pthread.h>
+	"wiringPi.h"
+	"softPwm.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/softPwm.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/softServo.c
+	<string.h>
+	<time.h>
+	<sys/time.h>
+	<pthread.h>
+	"wiringPi.h"
+	"softServo.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/softServo.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/softTone.c
+	<stdio.h>
+	<pthread.h>
+	"wiringPi.h"
+	"softTone.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/softTone.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/sr595.c
+	<stdio.h>
+	<stdint.h>
+	"wiringPi.h"
+	"sr595.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/sr595.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPi.c
+	<stdio.h>
+	<stdarg.h>
+	<stdint.h>
+	<stdlib.h>
+	<ctype.h>
+	<poll.h>
+	<unistd.h>
+	<errno.h>
+	<string.h>
+	<time.h>
+	<fcntl.h>
+	<pthread.h>
+	<sys/time.h>
+	<sys/mman.h>
+	<sys/stat.h>
+	<sys/wait.h>
+	<sys/ioctl.h>
+	<asm/ioctl.h>
+	"softPwm.h"
+	"softTone.h"
+	"wiringPi.h"
+	"../version.h"
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiI2C.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<errno.h>
+	<string.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<asm/ioctl.h>
+	"wiringPi.h"
+	"wiringPiI2C.h"
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiSPI.c
+	<stdio.h>
+	<stdint.h>
+	<stdlib.h>
+	<fcntl.h>
+	<errno.h>
+	<string.h>
+	<sys/ioctl.h>
+	<asm/ioctl.h>
+	<linux/spi/spidev.h>
+	"wiringPi.h"
+	"wiringPiSPI.h"
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringSerial.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stdarg.h>
+	<string.h>
+	<termios.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	"wiringSerial.h"
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringShift.c
+	<stdint.h>
+	"wiringPi.h"
+	"wiringShift.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringShift.h
+	<stdint.h>
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wpiExtensions.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stdarg.h>
+	<ctype.h>
+	<string.h>
+	<unistd.h>
+	<errno.h>
+	<sys/types.h>
+	<fcntl.h>
+	<wiringPi.h>
+	"mcp23008.h"
+	"mcp23016.h"
+	"mcp23017.h"
+	"mcp23s08.h"
+	"mcp23s17.h"
+	"sr595.h"
+	"pcf8574.h"
+	"pcf8591.h"
+	"mcp3002.h"
+	"mcp3004.h"
+	"mcp4802.h"
+	"mcp3422.h"
+	"max31855.h"
+	"max5322.h"
+	"ads1115.h"
+	"sn3218.h"
+	"drcSerial.h"
+	"drcNet.h"
+	"../wiringPiD/drcNetCmd.h"
+	"pseudoPins.h"
+	"bmp180.h"
+	"htu21d.h"
+	"ds18b20.h"
+	"rht03.h"
+	"wpiExtensions.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wpiExtensions.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/daemonise.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<syslog.h>
+	<signal.h>
+	<sys/stat.h>
+	"daemonise.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/daemonise.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/network.c
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<stdarg.h>
+	<malloc.h>
+	<fcntl.h>
+	<crypt.h>
+	"network.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/network.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/runRemote.c
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<wiringPi.h>
+	<wpiExtensions.h>
+	"drcNetCmd.h"
+	"network.h"
+	"runRemote.h"
+
+1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/runRemote.h
+
+1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPiD/wiringpid.c
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<stdarg.h>
+	<syslog.h>
+	<signal.h>
+	<errno.h>
+	<wiringPi.h>
+	<wpiExtensions.h>
+	"drcNetCmd.h"
+	"network.h"
+	"runRemote.h"
+	"daemonise.h"
+
+1701825712 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/main.cpp
+	<opencv2/core/core.hpp>
+	<opencv2/opencv.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<vector>
+	<thread>
+
+1608580898 /usr/include/opencv4/opencv2/core/core.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/version.hpp"
+	"opencv2/core/base.hpp"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core/persistence.hpp"
+	"opencv2/core/operations.hpp"
+	"opencv2/core/cvstd.inl.hpp"
+	"opencv2/core/utility.hpp"
+	"opencv2/core/optim.hpp"
+	"opencv2/core/ovx.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/cvdef.h
+	"cvconfig.h"
+	<limits>
+	<limits.h>
+	"opencv2/core/hal/interface.h"
+	"cv_cpu_dispatch.h"
+	<intrin.h>
+	<array>
+	<cstdint>
+	<stdint.h>
+	<stdint.h>
+	"opencv2/core/fast_math.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/hal/interface.h
+	<cstddef>
+	<stddef.h>
+	<stdbool.h>
+	<cstdint>
+	<stdint.h>
+
+1608580898 /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h
+	"cv_cpu_config.h"
+	"cv_cpu_helper.h"
+	<emmintrin.h>
+	<pmmintrin.h>
+	<tmmintrin.h>
+	<smmintrin.h>
+	<nmmintrin.h>
+	<nmmintrin.h>
+	<popcntintrin.h>
+	<immintrin.h>
+	<arm_neon.h>
+	<immintrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+	"hal/msa_macros.h"
+	<wasm_simd128.h>
+	<riscv_vector.h>
+	<emmintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+	<immintrin.h>
+
+1608580898 /usr/include/opencv4/opencv2/core/cv_cpu_helper.h
+
+1608580898 /usr/include/opencv4/opencv2/core/hal/msa_macros.h
+	"msa.h"
+	<stdint.h>
+
+1608580898 /usr/include/opencv4/opencv2/core/fast_math.hpp
+	"opencv2/core/cvdef.h"
+	<cmath>
+	<fastmath.h>
+	<math.h>
+	<emmintrin.h>
+	<altivec.h>
+
+1608580898 /usr/include/opencv4/opencv2/core/version.hpp
+
+1608580898 /usr/include/opencv4/opencv2/core/base.hpp
+	"opencv2/opencv_modules.hpp"
+	<climits>
+	<algorithm>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/neon_utils.hpp"
+	"opencv2/core/vsx_utils.hpp"
+	"opencv2/core/check.hpp"
+
+1623845387 /usr/include/opencv4/opencv2/opencv_modules.hpp
+
+1608580898 /usr/include/opencv4/opencv2/core/cvstd.hpp
+	"opencv2/core/cvdef.h"
+	<cstddef>
+	<cstring>
+	<cctype>
+	<string>
+	<algorithm>
+	<utility>
+	<cstdlib>
+	<cmath>
+	"cvstd_wrapper.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp
+	"opencv2/core/cvdef.h"
+	<string>
+	<memory>
+	<type_traits>
+
+1608580898 /usr/include/opencv4/opencv2/core/neon_utils.hpp
+	"opencv2/core/cvdef.h"
+
+1608580898 /usr/include/opencv4/opencv2/core/vsx_utils.hpp
+	"opencv2/core/cvdef.h"
+	<assert.h>
+
+1608580898 /usr/include/opencv4/opencv2/core/check.hpp
+	<opencv2/core/base.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/core/traits.hpp
+	"opencv2/core/cvdef.h"
+
+1608580898 /usr/include/opencv4/opencv2/core/matx.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/base.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/saturate.hpp"
+	<initializer_list>
+
+1608580898 /usr/include/opencv4/opencv2/core/saturate.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/fast_math.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/types.hpp
+	<climits>
+	<cfloat>
+	<vector>
+	<limits>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/matx.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/mat.hpp
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/bufferpool.hpp"
+	<type_traits>
+	"opencv2/core/mat.inl.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/bufferpool.hpp
+
+1608580898 /usr/include/opencv4/opencv2/core/mat.inl.hpp
+
+1608580898 /usr/include/opencv4/opencv2/core/persistence.hpp
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core.hpp"
+	<time.h>
+
+1608580898 /usr/include/opencv4/opencv2/core/operations.hpp
+	<cstdio>
+
+1608580898 /usr/include/opencv4/opencv2/core/cvstd.inl.hpp
+	<complex>
+	<ostream>
+	<sstream>
+
+1608580898 /usr/include/opencv4/opencv2/core/utility.hpp
+	"opencv2/core.hpp"
+	<ostream>
+	<functional>
+	<mutex>
+	"opencv2/core/utils/instrumentation.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/utils/instrumentation.hpp
+	<opencv2/core/utility.hpp>
+	<opencv2/core/utils/tls.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/core/utils/tls.hpp
+	<opencv2/core/utility.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/core/optim.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/ovx.hpp
+	"cvdef.h"
+
+1608580898 /usr/include/opencv4/opencv2/opencv.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/calib3d.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/dnn.hpp"
+	"opencv2/flann.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	"opencv2/objdetect.hpp"
+	"opencv2/photo.hpp"
+	"opencv2/stitching.hpp"
+	"opencv2/video.hpp"
+	"opencv2/videoio.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/calib3d.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/core/affine.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/features2d.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/flann/miniflann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/defines.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/defines.h
+	"config.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/config.h
+
+1608580898 /usr/include/opencv4/opencv2/core/affine.hpp
+	<opencv2/core.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/dnn.hpp
+	<opencv2/dnn/dnn.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/dnn/dnn.hpp
+	<vector>
+	<opencv2/core.hpp>
+	"opencv2/core/async.hpp"
+	"../dnn/version.hpp"
+	<opencv2/dnn/dict.hpp>
+	<opencv2/dnn/layer.hpp>
+	<opencv2/dnn/dnn.inl.hpp>
+	<opencv2/dnn/utils/inference_engine.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/core/async.hpp
+	<opencv2/core/mat.hpp>
+	<chrono>
+
+1608580898 /usr/include/opencv4/opencv2/dnn/version.hpp
+
+1608580898 /usr/include/opencv4/opencv2/dnn/dict.hpp
+	<opencv2/core.hpp>
+	<map>
+	<ostream>
+	<opencv2/dnn/dnn.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/dnn/layer.hpp
+	<opencv2/dnn.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp
+	<opencv2/dnn.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp
+	"../dnn.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/flann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	"opencv2/flann/flann_base.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/flann/flann_base.hpp
+	<vector>
+	<cstdio>
+	"general.h"
+	"matrix.h"
+	"params.h"
+	"saving.h"
+	"all_indices.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/general.h
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/flann/matrix.h
+	<stdio.h>
+
+1608580898 /usr/include/opencv4/opencv2/flann/params.h
+	"any.h"
+	"general.h"
+	<iostream>
+	<map>
+
+1608580898 /usr/include/opencv4/opencv2/flann/any.h
+	"defines.h"
+	<stdexcept>
+	<ostream>
+	<typeinfo>
+
+1608580898 /usr/include/opencv4/opencv2/flann/saving.h
+	<cstring>
+	<vector>
+	"general.h"
+	"nn_index.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/nn_index.h
+	"matrix.h"
+	"result_set.h"
+	"params.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/result_set.h
+	<algorithm>
+	<cstring>
+	<iostream>
+	<limits>
+	<set>
+	<vector>
+
+1608580898 /usr/include/opencv4/opencv2/flann/all_indices.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"hierarchical_clustering_index.h"
+	"lsh_index.h"
+	"autotuned_index.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/kdtree_index.h
+	<algorithm>
+	<map>
+	<cstring>
+	"nn_index.h"
+	"dynamic_bitset.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/dynamic_bitset.h
+	<boost/dynamic_bitset.hpp>
+	<limits.h>
+	"dist.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/dist.h
+	<cmath>
+	<cstdlib>
+	<string.h>
+	<stdint.h>
+	"defines.h"
+	<Intrin.h>
+	"arm_neon.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/heap.h
+	<algorithm>
+	<vector>
+
+1608580898 /usr/include/opencv4/opencv2/flann/allocator.h
+	<stdlib.h>
+	<stdio.h>
+
+1608580898 /usr/include/opencv4/opencv2/flann/random.h
+	<algorithm>
+	<cstdlib>
+	<vector>
+
+1608580898 /usr/include/opencv4/opencv2/flann/kdtree_single_index.h
+	<algorithm>
+	<map>
+	<cstring>
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/kmeans_index.h
+	<algorithm>
+	<map>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+	"logger.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/logger.h
+	<stdio.h>
+	<stdarg.h>
+	"defines.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/composite_index.h
+	"nn_index.h"
+	"kdtree_index.h"
+	"kmeans_index.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/linear_index.h
+	"nn_index.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h
+	<algorithm>
+	<map>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/lsh_index.h
+	<algorithm>
+	<cstring>
+	<map>
+	<vector>
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"lsh_table.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/lsh_table.h
+	<algorithm>
+	<iostream>
+	<iomanip>
+	<limits.h>
+	<unordered_map>
+	<map>
+	<math.h>
+	<stddef.h>
+	"dynamic_bitset.h"
+	"matrix.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/autotuned_index.h
+	<sstream>
+	"nn_index.h"
+	"ground_truth.h"
+	"index_testing.h"
+	"sampling.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"logger.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/ground_truth.h
+	"dist.h"
+	"matrix.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/index_testing.h
+	<cstring>
+	<cmath>
+	"matrix.h"
+	"nn_index.h"
+	"result_set.h"
+	"logger.h"
+	"timer.h"
+
+1608580898 /usr/include/opencv4/opencv2/flann/timer.h
+	<time.h>
+	"opencv2/core.hpp"
+	"opencv2/core/utility.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/flann/sampling.h
+	"matrix.h"
+	"random.h"
+
+1608580898 /usr/include/opencv4/opencv2/highgui.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/videoio.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/imgcodecs.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/videoio.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/imgproc.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/ml.hpp
+	"opencv2/core.hpp"
+	<float.h>
+	<map>
+	<iostream>
+	<opencv2/ml/ml.inl.hpp>
+
+1608580898 /usr/include/opencv4/opencv2/ml/ml.inl.hpp
+
+1608580898 /usr/include/opencv4/opencv2/objdetect.hpp
+	"opencv2/core.hpp"
+	"opencv2/objdetect/detection_based_tracker.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp
+	<opencv2/core.hpp>
+	<vector>
+
+1608580898 /usr/include/opencv4/opencv2/photo.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/stitching/warpers.hpp"
+	"opencv2/stitching/detail/matchers.hpp"
+	"opencv2/stitching/detail/motion_estimators.hpp"
+	"opencv2/stitching/detail/exposure_compensate.hpp"
+	"opencv2/stitching/detail/seam_finders.hpp"
+	"opencv2/stitching/detail/blenders.hpp"
+	"opencv2/stitching/detail/camera.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/warpers.hpp
+	"opencv2/stitching/detail/warpers.hpp"
+	<string>
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/opencv_modules.hpp"
+	"warpers_inl.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/cuda.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda_types.hpp"
+	<opencv2/opencv.hpp>
+	"opencv2/core/cuda.inl.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/core/cuda_types.hpp
+
+1608580898 /usr/include/opencv4/opencv2/core/cuda.inl.hpp
+	"opencv2/core/cuda.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp
+	"opencv2/core.hpp"
+	"warpers.hpp"
+	<limits>
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp
+	"opencv2/core.hpp"
+	"matchers.hpp"
+	"util.hpp"
+	"camera.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/util.hpp
+	<list>
+	"opencv2/core.hpp"
+	"util_inl.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp
+	<queue>
+	"opencv2/core.hpp"
+	"util.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/camera.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp
+	<set>
+	"opencv2/core.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/video.hpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/video/background_segm.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/video/tracking.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/video/background_segm.hpp
+	"opencv2/core.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/imgproc/imgproc.hpp
+	"opencv2/imgproc.hpp"
+
+1608580898 /usr/include/opencv4/opencv2/highgui/highgui.hpp
+	"opencv2/highgui.hpp"
+

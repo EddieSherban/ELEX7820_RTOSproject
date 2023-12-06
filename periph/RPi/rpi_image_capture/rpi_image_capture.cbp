@@ -14,6 +14,10 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --libs opencv4` -std=c++11" />
+					<Add option="-lpigpio -lrt -lpthread" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/rpi_image_capture" prefix_auto="1" extension_auto="1" />
@@ -27,13 +31,241 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++20" />
 			<Add option="`opencv-config --cxxflags`" />
+			<Add option="`pkg-config --cflags opencv4` -std=c++20" />
+			<Add option="-lwiringPi" />
 		</Compiler>
 		<Linker>
 			<Add option="`opencv-config --ldstaticflags`" />
+			<Add option="-lpigpio -lrt -lpthread" />
 		</Linker>
+		<Unit filename="WiringPi/COPYING.LESSER" />
+		<Unit filename="WiringPi/INSTALL" />
+		<Unit filename="WiringPi/People" />
+		<Unit filename="WiringPi/README.md" />
+		<Unit filename="WiringPi/VERSION" />
+		<Unit filename="WiringPi/build" />
+		<Unit filename="WiringPi/debian-template/wiringPi/DEBIAN/control" />
+		<Unit filename="WiringPi/debian-template/wiringPi/DEBIAN/postinst" />
+		<Unit filename="WiringPi/debian-template/wiringPi/DEBIAN/postrm" />
+		<Unit filename="WiringPi/debian/changelog" />
+		<Unit filename="WiringPi/debian/compat" />
+		<Unit filename="WiringPi/debian/control" />
+		<Unit filename="WiringPi/debian/copyright" />
+		<Unit filename="WiringPi/debian/libwiringpi-dev.dirs" />
+		<Unit filename="WiringPi/debian/libwiringpi-dev.install" />
+		<Unit filename="WiringPi/debian/libwiringpi2.install" />
+		<Unit filename="WiringPi/debian/libwiringpi2.shlibs" />
+		<Unit filename="WiringPi/debian/rules" />
+		<Unit filename="WiringPi/debian/wiringpi.dirs" />
+		<Unit filename="WiringPi/debian/wiringpi.install" />
+		<Unit filename="WiringPi/devLib/Makefile" />
+		<Unit filename="WiringPi/devLib/ds1302.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/ds1302.h" />
+		<Unit filename="WiringPi/devLib/font.h" />
+		<Unit filename="WiringPi/devLib/gertboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/gertboard.h" />
+		<Unit filename="WiringPi/devLib/lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/lcd.h" />
+		<Unit filename="WiringPi/devLib/lcd128x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/lcd128x64.h" />
+		<Unit filename="WiringPi/devLib/maxdetect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/maxdetect.h" />
+		<Unit filename="WiringPi/devLib/piFace.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/piFace.h" />
+		<Unit filename="WiringPi/devLib/piGlow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/piGlow.h" />
+		<Unit filename="WiringPi/devLib/piNes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/piNes.h" />
+		<Unit filename="WiringPi/devLib/scrollPhat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/devLib/scrollPhat.h" />
+		<Unit filename="WiringPi/devLib/scrollPhatFont.h" />
+		<Unit filename="WiringPi/examples/COPYING.LESSER" />
+		<Unit filename="WiringPi/examples/Gertboard/Makefile" />
+		<Unit filename="WiringPi/examples/Makefile" />
+		<Unit filename="WiringPi/examples/PiFace/Makefile" />
+		<Unit filename="WiringPi/examples/PiGlow/Makefile" />
+		<Unit filename="WiringPi/examples/README.TXT" />
+		<Unit filename="WiringPi/examples/blink.rtb" />
+		<Unit filename="WiringPi/examples/blink.sh" />
+		<Unit filename="WiringPi/examples/header.h" />
+		<Unit filename="WiringPi/examples/q2w/Makefile" />
+		<Unit filename="WiringPi/examples/q2w/blink.sh" />
+		<Unit filename="WiringPi/examples/scrollPhat/Makefile" />
+		<Unit filename="WiringPi/gpio/COPYING.LESSER" />
+		<Unit filename="WiringPi/gpio/Makefile" />
+		<Unit filename="WiringPi/gpio/gpio.1" />
+		<Unit filename="WiringPi/gpio/pintest" />
+		<Unit filename="WiringPi/gpio/test.sh" />
+		<Unit filename="WiringPi/newVersion" />
+		<Unit filename="WiringPi/pins/Makefile" />
+		<Unit filename="WiringPi/pins/pins.pdf" />
+		<Unit filename="WiringPi/pins/pins.tex" />
+		<Unit filename="WiringPi/update" />
+		<Unit filename="WiringPi/version.h" />
+		<Unit filename="WiringPi/wiringPi/COPYING.LESSER" />
+		<Unit filename="WiringPi/wiringPi/Makefile" />
+		<Unit filename="WiringPi/wiringPi/ads1115.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/ads1115.h" />
+		<Unit filename="WiringPi/wiringPi/bmp180.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/bmp180.h" />
+		<Unit filename="WiringPi/wiringPi/drcNet.h" />
+		<Unit filename="WiringPi/wiringPi/drcSerial.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/drcSerial.h" />
+		<Unit filename="WiringPi/wiringPi/ds18b20.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/ds18b20.h" />
+		<Unit filename="WiringPi/wiringPi/htu21d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/htu21d.h" />
+		<Unit filename="WiringPi/wiringPi/max31855.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/max31855.h" />
+		<Unit filename="WiringPi/wiringPi/max5322.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/max5322.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23008.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp23008.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23016.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp23016.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23016reg.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23017.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp23017.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23s08.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp23s08.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23s17.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp23s17.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23x08.h" />
+		<Unit filename="WiringPi/wiringPi/mcp23x0817.h" />
+		<Unit filename="WiringPi/wiringPi/mcp3002.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp3002.h" />
+		<Unit filename="WiringPi/wiringPi/mcp3004.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp3004.h" />
+		<Unit filename="WiringPi/wiringPi/mcp3422.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp3422.h" />
+		<Unit filename="WiringPi/wiringPi/mcp4802.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/mcp4802.h" />
+		<Unit filename="WiringPi/wiringPi/noMoreStatic" />
+		<Unit filename="WiringPi/wiringPi/pcf8574.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/pcf8574.h" />
+		<Unit filename="WiringPi/wiringPi/pcf8591.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/pcf8591.h" />
+		<Unit filename="WiringPi/wiringPi/piHiPri.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/piThread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/pseudoPins.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/pseudoPins.h" />
+		<Unit filename="WiringPi/wiringPi/rht03.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/rht03.h" />
+		<Unit filename="WiringPi/wiringPi/sn3218.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/sn3218.h" />
+		<Unit filename="WiringPi/wiringPi/softPwm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/softPwm.h" />
+		<Unit filename="WiringPi/wiringPi/softServo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/softServo.h" />
+		<Unit filename="WiringPi/wiringPi/softTone.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/softTone.h" />
+		<Unit filename="WiringPi/wiringPi/sr595.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/sr595.h" />
+		<Unit filename="WiringPi/wiringPi/wiringPi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/wiringPi.h" />
+		<Unit filename="WiringPi/wiringPi/wiringPiI2C.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/wiringPiI2C.h" />
+		<Unit filename="WiringPi/wiringPi/wiringPiSPI.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/wiringPiSPI.h" />
+		<Unit filename="WiringPi/wiringPi/wiringSerial.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/wiringSerial.h" />
+		<Unit filename="WiringPi/wiringPi/wiringShift.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="WiringPi/wiringPi/wiringShift.h" />
+		<Unit filename="WiringPi/wiringPi/wpiExtensions.h" />
+		<Unit filename="WiringPi/wiringPiD/Makefile" />
+		<Unit filename="WiringPi/wiringPiD/daemonise.h" />
+		<Unit filename="WiringPi/wiringPiD/drcNetCmd.h" />
+		<Unit filename="WiringPi/wiringPiD/network.h" />
+		<Unit filename="WiringPi/wiringPiD/runRemote.h" />
 		<Unit filename="arnold_schwarzenegger.jpg" />
+		<Unit filename="header.h" />
+		<Unit filename="lcd.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="spi.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
