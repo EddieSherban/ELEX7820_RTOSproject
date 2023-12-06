@@ -1,4 +1,4 @@
-// Filename:            Lab2Idle_main.c
+// Filename:            LabProject_main.c
 //
 // Description:         This file has a main, timer, and idle function for SYS/BIOS application.
 //
@@ -11,10 +11,8 @@
 //defines:
 #define xdc__strict //suppress typedef warnings
 
-#define RFFT_STAGES     8
+#define RFFT_STAGES     11
 #define RFFT_SIZE       (1 << RFFT_STAGES)
-#define EPSILON         0.01
-#define PI 3.14159265358979323
 
 //includes:
 #include <xdc/std.h>
@@ -26,28 +24,28 @@
 
 #include <Headers/F2837xD_device.h>
 
+#include "LabProject_main.h"
+
 //Swi handle defined in .cfg file:
-extern const Swi_Handle swi0;   //calc_FFT_swi4
-extern const Swi_Handle swi1;   //Menu_swi5
-extern const Swi_Handle swi2;   //Record_swi6
-extern const Swi_Handle swi3;   //PvP_swi7
+extern const Swi_Handle FFT_swi;
+extern const Swi_Handle menu_swi;
+extern const Swi_Handle PvP_swi;
+extern const Swi_Handle rec_swi;
+extern const Swi_Handle trans_swi;
+extern const Swi_Handle find_fund;
 
 //Task handle defined in .cfg file:
-extern const Task_Handle Tsk0;  //print_tsk8
-extern const Task_Handle Tsk1;  //wait_tsk9
-extern const Task_Handle Tsk2;  //start_sampling_tsk4
-extern const Task_Handle Tsk3;  //pwm_tsk10
-extern const Task_Handle Tsk5;  //print_message_tsk7
-extern const Task_Handle Tsk999;//Testing task
+extern const Task_Handle msg;
+extern const Task_Handle rec;
+extern const Task_Handle state0;
+extern const Task_Handle test;
 
-//Semaphore handle fdefined in .cfg file:
+//Semaphore handles defined in .cfg file:
 extern const Semaphore_Handle testing_sem;
-extern const Semaphore_Handle state_sem;
-extern const Semaphore_Handle wait_sem;
-extern const Semaphore_Handle pwm_sem;
-extern const Semaphore_Handle sampling_sem;
 extern const Semaphore_Handle print_sem;
-extern const Semaphore_Handle message_sem;
+extern const Semaphore_Handle state0_sem;
+extern const Semaphore_Handle state1_sem;
+extern const Semaphore_Handle state2_sem;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -64,10 +62,9 @@ extern void DeviceInit(void);
 
 //declare global variables:
 float RFFTin1Buff[RFFT_SIZE];
-float RFFTin2Buff[RFFT_SIZE];
+
 volatile Bool isrFlag = FALSE; //flag used by idle function
 volatile Bool isrFlag2 = FALSE; //ES
-volatile UInt tickCount = 0; //counter incremented by timer interrupt
 
 //FFT Calculation Buffer:
 //The input buffer needs to be aligned to a 4N word boundary
@@ -93,21 +90,25 @@ RFFT_F32_STRUCT rfft;
 //Declare and initialize FFT structure object:
 RFFT_F32_STRUCT_Handle hnd_rfft = &rfft;
 
-float RadStep = 0.1963495408494f; //step
-float Rad = 0.0f;
+//float RadStep = 0.1963495408494f; //step
+//float Rad = 0.0f;
 
-Uint16 once = TRUE;
 Uint16 bin = 0;
-int32_t count = 1;
 
-int sec = 0;                    //ES
-int soc0_adc_voltage = 0;
-int soc1_adc_voltage = 0;
 //declare global variables:
+int sec = 0;                    //ES
+float soc0_adc_voltage = 0;
+float soc1_adc_voltage = 0;
+int currentState = 0;
+volatile UInt time_ten_ms = 0;
+volatile UInt tickCount = 0; //counter incremented by timer interrupt
+int bufferIndex = 0;
+int fun_freq = 0;
+
 
 /* ======== main ======== */
 Int main()
-{ 
+ {
     uint16_t i;
 
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
@@ -117,7 +118,6 @@ Int main()
     for(i=0; i < RFFT_SIZE; i++){
         RFFTin1Buff[i] = 0.0f;
     }
-
     hnd_rfft->FFTSize   = RFFT_SIZE;
     hnd_rfft->FFTStages = RFFT_STAGES;
     hnd_rfft->InBuf     = &RFFTin1Buff[0];  //Input buffer
@@ -146,6 +146,7 @@ Int main()
 
 //Timer tick function that increments a counter and sets the isrFlag
 //Entered 100 times per second if PLL and Timer set up correctly
+//tickCount is in units of 10ms
 Void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
@@ -168,6 +169,14 @@ Void myIdleFxn(Void)
        isrFlag = FALSE;
        GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1; //toggle blue LED:
    }
+
+   //debounce
+   if(100*(tickCount-time_ten_ms) >= time_ten_ms){
+       EALLOW;
+       XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
+       EDIS;
+   }
+
 }
 
 Void myIdleFxn2(Void)       //ES
@@ -176,7 +185,7 @@ Void myIdleFxn2(Void)       //ES
         isrFlag2 = FALSE;
         sec++;
         //print time in seconds to SysMin
-        System_printf("Timer(sec) = %i \n",sec);
+        //System_printf("Timer(sec) = %i \n",sec);
     }
 }                           //ES
 /* ======== IDLE FXNS ======== */
@@ -186,24 +195,32 @@ Void myIdleFxn2(Void)       //ES
 //adc HWI (1st Priority)
 Void adc_hwi(Void)
 {
-    soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;   //result for ADCINA5
-    soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+    soc0_adc_voltage = AdcaResultRegs.ADCRESULT0/4095.0 * 3.0;   //result for ADCINA5
+    //soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+
+    RFFTin1Buff[bufferIndex] = soc0_adc_voltage;
+    bufferIndex++;
+    if(bufferIndex >= RFFT_SIZE)
+    {
+        bufferIndex = 0;    //reset buffer index
+        Swi_post(FFT_swi);  //post FFT SWI
+    }
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
-    System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
-    System_printf("adca5 voltage: %i \n",soc1_adc_voltage);
+    //System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
+    //System_printf("adca5 voltage: %i \n",soc1_adc_voltage);
 }
 
 //Reset HWI (2nd Priority)
 Void button_press(Void)
 {
+    time_ten_ms = tickCount;
     EALLOW;
     XintRegs.XINT1CR.bit.ENABLE = 0;    //disable xint1 interrupt
     EDIS;
 
     XbarRegs.XBARCLR2.bit.INPUT4 = 1;   //INPUT4 X-BAR Flag Clear
-    EALLOW;
-    XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
-    EDIS;
+
+    Swi_post(trans_swi);                    //notify a transition in swi
 }
 /* ======== HWIs ======== */
 
@@ -211,37 +228,50 @@ Void button_press(Void)
 /* ======== SWIs ======== */
 Void calc_FFT_swi4(Void)
 {
-    /*   //determine if tickCount is a prime:
-       UInt counter, flag;
 
-       counter = 2;
-       flag = 1;
-       while(counter < tickCount) {
-           if(tickCount % counter == 0){
-               flag = 0;
-           }
-           counter++;
-       }
-       if(flag == 1 && tickCount != 1){
-           GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1; //toggle red LED
-           //System_printf("tickCount: %u\n", tickCount);
-       }*/
+    RFFT_f32(hnd_rfft);
+    RFFT_f32_sincostable(hnd_rfft);
+    RFFT_f32_mag(hnd_rfft);
+    Swi_post(find_fund);
 }
 
-Void Menu_swi5(Void)
+Void fund_freq_swi(Void)
 {
-    //Semaphore_post(testing_sem);
 
+    for(int i = 5; i <= RFFT_SIZE/2+1; i++)
+    {
+        if(RFFTmagBuff[i] > 800)
+        {
+            float calc = (float)i / (RFFT_SIZE/2+1) * 4000.0;
+            fun_freq = calc;
+            break;
+        }
+    }
 }
 
-Void Record_swi6(Void)
+Void transition_swi(Void)
 {
-
+    if(currentState == 0)
+        Swi_post(menu_swi);
+    if(currentState == 1)
+        Swi_post(rec_swi);
+    if(currentState == 2)
+        Swi_post(PvP_swi);
 }
 
-Void PvP_swi7(Void)
+Void state0_Menu_swi5(Void)
 {
+    Semaphore_post(state0_sem);
+}
 
+Void state1_Record_swi6(Void)
+{
+    Semaphore_post(state1_sem);
+}
+
+Void state2_PvP_swi7(Void)
+{
+    Semaphore_post(state2_sem);
 }
 
 /* ======== SWIs ======== */
@@ -250,39 +280,40 @@ Void PvP_swi7(Void)
 Void Testing(Void) //priority 1 (lowest task priority)
 {
     while(TRUE){
-        Semaphore_pend(testing_sem, BIOS_WAIT_FOREVER);   //wait for semaphore to be posted
-        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;    //toggle red LED
+        Semaphore_pend(testing_sem, BIOS_WAIT_FOREVER);     //wait for semaphore to be posted
+        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;            //toggle red LED
         GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;
     }
 }
 
-Void Print_tsk8(Void){
-    while(TRUE){
-        Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
+Void state0_menu_Tsk(Void)
+{
+    Semaphore_pend(state0_sem, BIOS_WAIT_FOREVER);
+    PWM_custom_dutycycle(0.9);
+    if(currentState == 0) {
+        //print self playing or pvp?
+        currentState = (currentState + 1) % 3;
     }
 }
 
-Void wait_tsk9(Void){
-    while(TRUE){
-        Semaphore_pend(wait_sem, BIOS_WAIT_FOREVER);
-    }
+Void state1_Record_Tsk(Void)
+{
+    Semaphore_pend(state1_sem, BIOS_WAIT_FOREVER);
+    PWM_custom_dutycycle(0.7);
+    //start sampling
+    EALLOW;
+    ADC_init();
+    EDIS;
 }
 
-Void Start_sampling_tsk4(Void){
-    while(TRUE){
-        Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
-    }
-}
+//Void state2_PvP_Tsk(Void){
 
-Void pwm_tsk10(Void){
-    while(TRUE){
-        Semaphore_pend(pwm_sem, BIOS_WAIT_FOREVER);
-    }
-}
+//}
 
 Void print_message_tsk7(Void){
     while(TRUE){
-        Semaphore_pend(message_sem, BIOS_WAIT_FOREVER);
+        Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
     }
 }
+
 /* ======== TASKs ======== */

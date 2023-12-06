@@ -21,7 +21,7 @@ void DeviceInit(void)
 EALLOW; //allow access to protected registers
 
     GPIO_init();
-    ADC_init();
+    //ADC_init();
     PWM_init();
     //PWM_half_dutycycle();
 

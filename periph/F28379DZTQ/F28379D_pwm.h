@@ -16,7 +16,7 @@
 #include <Headers/F2837xD_device.h>
 
 #define EN                  1
-#define INIT_DUTY_CYCLE     0.5
+#define INIT_DUTY_CYCLE     0.1
 #define FREQ                1000                    //~750 is good
 #define EPWM_DIV1           0                 //don't divide PLLSYSCLK
 #define TB_DIV8             3
