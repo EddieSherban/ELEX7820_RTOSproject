@@ -13,8 +13,6 @@
 
 #define RFFT_STAGES     11
 #define RFFT_SIZE       (1 << RFFT_STAGES)
-#define EPSILON         0.01
-#define PI 3.14159265358979323
 
 //includes:
 #include <xdc/std.h>
@@ -34,6 +32,7 @@ extern const Swi_Handle menu_swi;
 extern const Swi_Handle PvP_swi;
 extern const Swi_Handle rec_swi;
 extern const Swi_Handle trans_swi;
+extern const Swi_Handle find_fund;
 
 //Task handle defined in .cfg file:
 extern const Task_Handle msg;
@@ -94,9 +93,7 @@ RFFT_F32_STRUCT_Handle hnd_rfft = &rfft;
 //float RadStep = 0.1963495408494f; //step
 //float Rad = 0.0f;
 
-Uint16 once = TRUE;
 Uint16 bin = 0;
-int32_t count = 1;
 
 //declare global variables:
 int sec = 0;                    //ES
@@ -106,6 +103,8 @@ int currentState = 0;
 volatile UInt time_ten_ms = 0;
 volatile UInt tickCount = 0; //counter incremented by timer interrupt
 int bufferIndex = 0;
+int fun_freq;
+
 
 /* ======== main ======== */
 Int main()
@@ -229,9 +228,24 @@ Void button_press(Void)
 /* ======== SWIs ======== */
 Void calc_FFT_swi4(Void)
 {
+
     RFFT_f32(hnd_rfft);
+    RFFT_f32_sincostable(hnd_rfft);
     RFFT_f32_mag(hnd_rfft);
     Swi_post(find_fund);
+}
+
+Void fund_freq_swi(Void)
+{
+
+    for(int i = 5; i <= RFFT_SIZE/2+1; i++)
+    {
+        if(RFFTmagBuff[i] > 800)
+        {
+            fun_freq = i*4000;
+            break;
+        }
+    }
 }
 
 Void transition_swi(Void)
