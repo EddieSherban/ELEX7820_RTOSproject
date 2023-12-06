@@ -86,9 +86,6 @@ bool i2c_master_tx(char dev_addr, const char *data, uint16_t data_length)
 
     I2caRegs.I2CMDR.bit.STT = 1; //assert start condition
 
-
-
-
     for(i = 0; i < data_length; i++)
     {
 
@@ -100,18 +97,11 @@ bool i2c_master_tx(char dev_addr, const char *data, uint16_t data_length)
             if(i2c_nack_check() || ((Clock_getTicks() - start_time) > I2C_TIMEOUT_MS))
                 return false; //fail transaction if slave NACKs byte or does not ACK byte before I2C_TIMEOUT_MS
         }
-
-
         I2caRegs.I2CDXR.bit.DATA = data[i];
-
     }
 
-
-
     I2caRegs.I2CMDR.bit.STP = 1;//assert stop condition
-
     return true;
-
 
 }
 
@@ -130,10 +120,8 @@ bool i2c_master_rx(char dev_addr, char *data, uint16_t data_length)
 
     I2caRegs.I2CMDR.bit.STT = 1; //assert start condition
 
-
     for (i = 0; i < data_length; i++)
     {
-
         start_time = Clock_getTicks();
 
         // Wait until data is received
@@ -142,9 +130,7 @@ bool i2c_master_rx(char dev_addr, char *data, uint16_t data_length)
             //check for NACK
             if (i2c_nack_check() || ((Clock_getTicks() - start_time) > I2C_TIMEOUT_MS))
                 return false; //fail transaction if slave NACKs byte or does not ACK byte before I2C_TIMEOUT_MS
-
         }
-
         // If it's the last byte, send NACK before stopping
         if (i == (data_length - 2))
             I2caRegs.I2CMDR.bit.NACKMOD = 1;
@@ -153,9 +139,7 @@ bool i2c_master_rx(char dev_addr, char *data, uint16_t data_length)
         data[i] = (char)I2caRegs.I2CDRR.bit.DATA;
 
     }
-
     I2caRegs.I2CMDR.bit.STP = 1;//assert stop condition
-
     return true;
 }
 
@@ -163,7 +147,6 @@ bool i2c_nack_check()
 {
     if(I2caRegs.I2CSTR.bit.NACK) //check for NACK
     {
-
        //clear nack and data ready flags
        I2caRegs.I2CSTR.bit.NACK = 1;
        I2caRegs.I2CSTR.bit.XRDY = 1;
