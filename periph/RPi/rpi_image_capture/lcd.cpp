@@ -44,6 +44,8 @@ void lcd_toggle_enable(int bits);
 
 // added by Lewis
 void typeInt(int i);
+void typeIntPad3(int i);
+void typeIntPad5(int i);
 void typeFloat(float myFloat);
 void lcdLoc(int line); //move cursor
 void ClrLcd(void); // clr LCD return home
@@ -51,6 +53,65 @@ void typeln(const char *s);
 void typeChar(char val);
 void typeString(std::string full);
 int fd;  // seen by all subroutines
+
+extern int  _state,
+            _ballX,
+            _ballY,
+            _car1,
+            _car2,
+            _score1,
+            _score2;
+
+//
+void do_lcd()
+{
+    if (wiringPiSetup () == -1)
+        exit (1);
+
+    fd = wiringPiI2CSetup(I2C_ADDR);
+
+    lcd_init(); // setup LCD
+    ClrLcd();
+
+    while (true)
+    {
+        lcdLoc(LINE1);
+        typeln("Ball>X:");
+        lcdLoc(LINE1 + 7);
+        typeln("12345");
+        lcdLoc(LINE1 + 12);
+        typeln(",Y:");
+        lcdLoc(LINE1 + 15);
+        typeln("12345");
+
+        lcdLoc(LINE2);
+        typeln("Cars>A:");
+        lcdLoc(LINE2 + 7);
+        typeln("12345");
+        lcdLoc(LINE2 + 12);
+        typeln(",B:");
+        lcdLoc(LINE2 + 15);
+        typeln("12345");
+
+        lcdLoc(LINE3);
+        typeln("<S");
+        lcdLoc(LINE3 + 2);
+        typeIntPad3(_state);
+        lcdLoc(LINE3 + 5);
+        typeln(">");
+        lcdLoc(LINE3 + 6);
+        typeln(" P1:");
+        lcdLoc(LINE3 + 10);
+        typeIntPad3(_score1);
+        lcdLoc(LINE3 + 13);
+        typeln(" P2:");
+        lcdLoc(LINE3 + 17);
+        typeIntPad3(_score2);
+
+        lcdLoc(LINE4);
+        typeln("State description...");
+    }
+}
 
 int lcd_test()   {
 
@@ -139,6 +200,20 @@ void typeFloat(float myFloat)   {
 void typeInt(int i)   {
   char array1[20];
   sprintf(array1, "%d",  i);
+  typeln(array1);
+}
+
+// int to string
+void typeIntPad3(int i)   {
+  char array1[20];
+  sprintf(array1, "%03d",  i);
+  typeln(array1);
+}
+
+// int to string
+void typeIntPad5(int i)   {
+  char array1[20];
+  sprintf(array1, "%05d",  i);
   typeln(array1);
 }
 

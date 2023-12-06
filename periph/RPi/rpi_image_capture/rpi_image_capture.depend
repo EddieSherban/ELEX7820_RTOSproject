@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1701839972 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/lcd.cpp
+1701894256 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/lcd.cpp
 	"WiringPi/wiringPi/wiringPi.h"
 	"WiringPi/wiringPi/wiringPiI2C.h"
 	<stdlib.h>
@@ -604,7 +604,7 @@
 	"mcp23x0817.h"
 	"mcp23s08.h"
 
-1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiSPI.h
+1701892552 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiSPI.h
 
 1701746848 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/mcp23s08.h
 
@@ -776,7 +776,7 @@
 	"wiringPi.h"
 	"wiringPiI2C.h"
 
-1701746848 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiSPI.c
+1701892552 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/WiringPi/wiringPi/wiringPiSPI.c
 	<stdio.h>
 	<stdint.h>
 	<stdlib.h>
@@ -912,13 +912,13 @@
 	"runRemote.h"
 	"daemonise.h"
 
-1701825712 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/main.cpp
+1701868121 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/main.cpp
 	<opencv2/core/core.hpp>
 	<opencv2/opencv.hpp>
 	<opencv2/imgproc/imgproc.hpp>
 	<opencv2/highgui/highgui.hpp>
-	<vector>
 	<thread>
+	"header.h"
 
 1608580898 /usr/include/opencv4/opencv2/core/core.hpp
 	"opencv2/core.hpp"
@@ -1531,4 +1531,13 @@
 
 1608580898 /usr/include/opencv4/opencv2/highgui/highgui.hpp
 	"opencv2/highgui.hpp"
+
+1701893657 source:/home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/spi.cpp
+	<wiringPiSPI.h>
+	<thread>
+	<chrono>
+	<utility>
+	<iostream>
+
+1701843058 /home/EddieSherbanpi/Documents/ELEX7820_RTOSproject/periph/RPi/rpi_image_capture/header.h
 
