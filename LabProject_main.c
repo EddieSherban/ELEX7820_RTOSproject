@@ -11,7 +11,7 @@
 //defines:
 #define xdc__strict //suppress typedef warnings
 
-#define RFFT_STAGES     11
+#define RFFT_STAGES     4
 #define RFFT_SIZE       (1 << RFFT_STAGES)
 #define EPSILON         0.01
 #define PI 3.14159265358979323
@@ -63,7 +63,7 @@ extern void DeviceInit(void);
 
 //declare global variables:
 float RFFTin1Buff[RFFT_SIZE];
-float RFFTin2Buff[RFFT_SIZE];
+
 volatile Bool isrFlag = FALSE; //flag used by idle function
 volatile Bool isrFlag2 = FALSE; //ES
 
@@ -100,15 +100,16 @@ int32_t count = 1;
 
 //declare global variables:
 int sec = 0;                    //ES
-int soc0_adc_voltage = 0;
-int soc1_adc_voltage = 0;
+float soc0_adc_voltage = 0;
+float soc1_adc_voltage = 0;
 int currentState = 0;
 volatile UInt time_ten_ms = 0;
 volatile UInt tickCount = 0; //counter incremented by timer interrupt
+int bufferIndex = 0;
 
 /* ======== main ======== */
 Int main()
-{ 
+ {
     uint16_t i;
 
     System_printf("Enter main()\n"); //use ROV->SysMin to view the characters in the circular buffer
@@ -196,9 +197,18 @@ Void myIdleFxn2(Void)       //ES
 //adc HWI (1st Priority)
 Void adc_hwi(Void)
 {
-    soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;   //result for ADCINA5
-    soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
-    Swi_post(FFT_swi);
+    soc0_adc_voltage = AdcaResultRegs.ADCRESULT0/4095.0 * 3.0;   //result for ADCINA5
+    //soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+
+    RFFTin1Buff[bufferIndex] = soc0_adc_voltage;
+    System_printf("adca3 voltage: %.6f \n",RFFTin1Buff[bufferIndex]);
+    System_printf("adca3 voltage: %.6f \n",soc0_adc_voltage);
+    bufferIndex++;
+    if(bufferIndex >= RFFT_SIZE)
+    {
+        bufferIndex = 0;    //reset buffer index
+        Swi_post(FFT_swi);  //post FFT SWI
+    }
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
     //System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
     //System_printf("adca5 voltage: %i \n",soc1_adc_voltage);
@@ -222,21 +232,8 @@ Void button_press(Void)
 /* ======== SWIs ======== */
 Void calc_FFT_swi4(Void)
 {
-    /*   //determine if tickCount is a prime:
-       UInt counter, flag;
-
-       counter = 2;
-       flag = 1;
-       while(counter < tickCount) {
-           if(tickCount % counter == 0){
-               flag = 0;
-           }
-           counter++;
-       }
-       if(flag == 1 && tickCount != 1){
-           GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1; //toggle red LED
-           //System_printf("tickCount: %u\n", tickCount);
-       }*/
+    RFFT_f32(hnd_rfft);
+    RFFT_f32_mag(hnd_rfft);
 }
 
 Void transition_swi(Void)
