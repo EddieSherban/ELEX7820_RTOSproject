@@ -17,55 +17,46 @@ extern const ti_sysbios_family_c28_Hwi_Handle hwi0;
 extern const ti_sysbios_family_c28_Hwi_Handle hwi1;
 
 #include <ti/sysbios/knl/Swi.h>
-extern const ti_sysbios_knl_Swi_Handle swi0;
+extern const ti_sysbios_knl_Swi_Handle FFT_swi;
 
 #include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle task0;
+extern const ti_sysbios_knl_Task_Handle state0;
 
 #include <ti/sysbios/knl/Semaphore.h>
 extern const ti_sysbios_knl_Semaphore_Handle testing_sem;
 
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle task1;
-
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle task2;
-
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle state_sem;
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle menu_swi;
 
 #include <ti/sysbios/knl/Swi.h>
-extern const ti_sysbios_knl_Swi_Handle swi1;
+extern const ti_sysbios_knl_Swi_Handle rec_swi;
 
 #include <ti/sysbios/knl/Swi.h>
-extern const ti_sysbios_knl_Swi_Handle swi2;
-
-#include <ti/sysbios/knl/Swi.h>
-extern const ti_sysbios_knl_Swi_Handle swi3;
+extern const ti_sysbios_knl_Swi_Handle PvP_swi;
 
 #include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle task3;
-
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle task999;
-
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle pwm_sem;
-
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle sampling_sem;
-
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle wait_sem;
+extern const ti_sysbios_knl_Task_Handle test;
 
 #include <ti/sysbios/knl/Semaphore.h>
 extern const ti_sysbios_knl_Semaphore_Handle print_sem;
 
 #include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle task5;
+extern const ti_sysbios_knl_Task_Handle msg;
 
 #include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle message_sem;
+extern const ti_sysbios_knl_Semaphore_Handle state0_sem;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle state1_sem;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle state2_sem;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle rec;
+
+#include <ti/sysbios/family/c28/Timer.h>
+extern const ti_sysbios_family_c28_Timer_Handle adctimer;
 
 extern int xdc_runtime_Startup__EXECFXN__C;
 

@@ -32,11 +32,11 @@ void ADC_init()
     //Basic Synchronous Operation
     AdcaRegs.ADCSOC0CTL.bit.CHSEL = 5;      //SOC0 will convert ADCINA5
     AdcaRegs.ADCSOC0CTL.bit.ACQPS = 139;    //set SOC0 window to 139 SYSCLK cycles
-    AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 1;    //SOC0 will begin conversion on CPU Timer 0
+    //AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 1;    //SOC0 will begin conversion on CPU Timer 0
 
     AdcaRegs.ADCSOC1CTL.bit.CHSEL = 3;      //SOC1 will convert ADCINA3
     AdcaRegs.ADCSOC1CTL.bit.ACQPS = 145;    //set SOC1 window to 301 SYSCLK cycles
-    AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 1;    //SOC1 will begin conversion on CPU Timer 0
+    //AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 1;    //SOC1 will begin conversion on CPU Timer 0
 
     AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 0;  //connect interrupt ADCINT1 to EOC0
     AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;    //enable interrupt ADCINT1

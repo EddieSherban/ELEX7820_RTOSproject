@@ -26,32 +26,26 @@
 
 #include <Headers/F2837xD_device.h>
 
+#include "LabProject_main.h"
+
 //Swi handle defined in .cfg file:
-extern const Swi_Handle swi0;   //calc_FFT_swi4
-extern const Swi_Handle swi1;   //Menu_swi5
-extern const Swi_Handle swi2;   //Record_swi6
-extern const Swi_Handle swi3;   //PvP_swi7
+extern const Swi_Handle FFT_swi;   //calc_FFT_swi4
+extern const Swi_Handle menu_swi;   //state1_Menu_swi5
+extern const Swi_Handle PvP_swi;   //state2_Record_swi6
+extern const Swi_Handle rec_swi;   //state3_PvP_swi7
 
 //Task handle defined in .cfg file:
-extern const Task_Handle Tsk0;  //print_tsk8
-extern const Task_Handle Tsk1;  //wait_tsk9
-extern const Task_Handle Tsk2;  //start_sampling_tsk4
-extern const Task_Handle Tsk3;  //pwm_tsk10
-extern const Task_Handle Tsk5;  //print_message_tsk7
-extern const Task_Handle Tsk999;//Testing task
+extern const Task_Handle msg;
+extern const Task_Handle rec;
+extern const Task_Handle state0;
+extern const Task_Handle test;
 
 //Semaphore handles defined in .cfg file:
 extern const Semaphore_Handle testing_sem;
-extern const Semaphore_Handle state_sem;
-extern const Semaphore_Handle wait_sem;
-extern const Semaphore_Handle pwm_sem;
-extern const Semaphore_Handle sampling_sem;
 extern const Semaphore_Handle print_sem;
-//message semaphores
-extern const Semaphore_Handle hello_msg_sem;
-extern const Semaphore_Handle option_msg_sem;
-extern const Semaphore_Handle start_recording_msg_sem;
-extern const Semaphore_Handle countdown_msg_sem
+extern const Semaphore_Handle state0_sem;
+extern const Semaphore_Handle state1_sem;
+extern const Semaphore_Handle state2_sem;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -99,6 +93,8 @@ RFFT_F32_STRUCT_Handle hnd_rfft = &rfft;
 
 float RadStep = 0.1963495408494f; //step
 float Rad = 0.0f;
+
+int currentState = 1;
 
 Uint16 once = TRUE;
 Uint16 bin = 0;
@@ -232,20 +228,24 @@ Void calc_FFT_swi4(Void)
        }*/
 }
 
-Void Menu_swi5(Void)
+Void state0_Menu_swi5(Void)
 {
-    //Semaphore_post(testing_sem);
+    if(currentState == 0)
+        Semaphore_post(state0_sem);
 
 }
 
-Void Record_swi6(Void)
+Void state1_Record_swi6(Void)
 {
+    if(currentState == 1)
+        Semaphore_post(state1_sem);
 
 }
 
-Void PvP_swi7(Void)
+Void state2_PvP_swi7(Void)
 {
-
+    if(currentState == 2)
+        Semaphore_post(state2_sem);
 }
 
 /* ======== SWIs ======== */
@@ -254,41 +254,34 @@ Void PvP_swi7(Void)
 Void Testing(Void) //priority 1 (lowest task priority)
 {
     while(TRUE){
-        Semaphore_pend(testing_sem, BIOS_WAIT_FOREVER);   //wait for semaphore to be posted
-        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;    //toggle red LED
+        Semaphore_pend(testing_sem, BIOS_WAIT_FOREVER);     //wait for semaphore to be posted
+        //GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;            //toggle red LED
         GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;
     }
 }
 
-Void Print_tsk8(Void){
-    while(TRUE){
-        Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
+Void state0_menu_Tsk(Void)
+{
+    Semaphore_pend(state0_sem, BIOS_WAIT_FOREVER);
+    if(currentState == 0) {
+        //print self playing or pvp?
+        currentState = (currentState + 1) % 3;
     }
 }
 
+Void state1_Record_Tsk(Void)
+{
+    Semaphore_pend(state1_sem, BIOS_WAIT_FOREVER);
+    //start sampling
+}
+
+//Void state2_PvP_Tsk(Void){
+
+//}
 
 Void print_message_tsk7(Void){
     while(TRUE){
-        Semaphore_pend(hello_message_sem, BIOS_WAIT_FOREVER);
-        //Semaphore_pend();
-    }
-}
-
-Void wait_tsk9(Void){
-    while(TRUE){
-        Semaphore_pend(wait_sem, BIOS_WAIT_FOREVER);
-    }
-}
-
-Void Start_sampling_tsk4(Void){
-    while(TRUE){
         Semaphore_pend(print_sem, BIOS_WAIT_FOREVER);
-    }
-}
-
-Void pwm_tsk10(Void){
-    while(TRUE){
-        Semaphore_pend(pwm_sem, BIOS_WAIT_FOREVER);
     }
 }
 
