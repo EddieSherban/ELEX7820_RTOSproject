@@ -1,4 +1,4 @@
-// Filename:            Lab2Idle_main.c
+// Filename:            LabProject_main.c
 //
 // Description:         This file has a main, timer, and idle function for SYS/BIOS application.
 //
@@ -11,7 +11,7 @@
 //defines:
 #define xdc__strict //suppress typedef warnings
 
-#define RFFT_STAGES     8
+#define RFFT_STAGES     11
 #define RFFT_SIZE       (1 << RFFT_STAGES)
 #define EPSILON         0.01
 #define PI 3.14159265358979323
@@ -29,10 +29,11 @@
 #include "LabProject_main.h"
 
 //Swi handle defined in .cfg file:
-extern const Swi_Handle FFT_swi;   //calc_FFT_swi4
-extern const Swi_Handle menu_swi;   //state1_Menu_swi5
-extern const Swi_Handle PvP_swi;   //state2_Record_swi6
-extern const Swi_Handle rec_swi;   //state3_PvP_swi7
+extern const Swi_Handle FFT_swi;
+extern const Swi_Handle menu_swi;
+extern const Swi_Handle PvP_swi;
+extern const Swi_Handle rec_swi;
+extern const Swi_Handle trans_swi;
 
 //Task handle defined in .cfg file:
 extern const Task_Handle msg;
@@ -65,7 +66,6 @@ float RFFTin1Buff[RFFT_SIZE];
 float RFFTin2Buff[RFFT_SIZE];
 volatile Bool isrFlag = FALSE; //flag used by idle function
 volatile Bool isrFlag2 = FALSE; //ES
-volatile UInt tickCount = 0; //counter incremented by timer interrupt
 
 //FFT Calculation Buffer:
 //The input buffer needs to be aligned to a 4N word boundary
@@ -94,16 +94,17 @@ RFFT_F32_STRUCT_Handle hnd_rfft = &rfft;
 float RadStep = 0.1963495408494f; //step
 float Rad = 0.0f;
 
-int currentState = 1;
-
 Uint16 once = TRUE;
 Uint16 bin = 0;
 int32_t count = 1;
 
+//declare global variables:
 int sec = 0;                    //ES
 int soc0_adc_voltage = 0;
 int soc1_adc_voltage = 0;
-//declare global variables:
+int currentState = 0;
+volatile UInt time_ten_ms = 0;
+volatile UInt tickCount = 0; //counter incremented by timer interrupt
 
 /* ======== main ======== */
 Int main()
@@ -146,6 +147,7 @@ Int main()
 
 //Timer tick function that increments a counter and sets the isrFlag
 //Entered 100 times per second if PLL and Timer set up correctly
+//tickCount is in units of 10ms
 Void myTickFxn(UArg arg)
 {
     tickCount++; //increment the tick counter
@@ -168,6 +170,14 @@ Void myIdleFxn(Void)
        isrFlag = FALSE;
        GpioDataRegs.GPATOGGLE.bit.GPIO31 = 1; //toggle blue LED:
    }
+
+   //debounce
+   if(100*(tickCount-time_ten_ms) >= time_ten_ms){
+       EALLOW;
+       XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
+       EDIS;
+   }
+
 }
 
 Void myIdleFxn2(Void)       //ES
@@ -176,7 +186,7 @@ Void myIdleFxn2(Void)       //ES
         isrFlag2 = FALSE;
         sec++;
         //print time in seconds to SysMin
-        System_printf("Timer(sec) = %i \n",sec);
+        //System_printf("Timer(sec) = %i \n",sec);
     }
 }                           //ES
 /* ======== IDLE FXNS ======== */
@@ -188,22 +198,23 @@ Void adc_hwi(Void)
 {
     soc0_adc_voltage = AdcaResultRegs.ADCRESULT0;   //result for ADCINA5
     soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+    Swi_post(FFT_swi);
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
-    System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
-    System_printf("adca5 voltage: %i \n",soc1_adc_voltage);
+    //System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
+    //System_printf("adca5 voltage: %i \n",soc1_adc_voltage);
 }
 
 //Reset HWI (2nd Priority)
 Void button_press(Void)
 {
+    time_ten_ms = tickCount;
     EALLOW;
     XintRegs.XINT1CR.bit.ENABLE = 0;    //disable xint1 interrupt
     EDIS;
 
     XbarRegs.XBARCLR2.bit.INPUT4 = 1;   //INPUT4 X-BAR Flag Clear
-    EALLOW;
-    XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
-    EDIS;
+
+    Swi_post(trans_swi);                    //notify a transition in swi
 }
 /* ======== HWIs ======== */
 
@@ -228,24 +239,29 @@ Void calc_FFT_swi4(Void)
        }*/
 }
 
-Void state0_Menu_swi5(Void)
+Void transition_swi(Void)
 {
     if(currentState == 0)
-        Semaphore_post(state0_sem);
+        Swi_post(menu_swi);
+    if(currentState == 1)
+        Swi_post(rec_swi);
+    if(currentState == 2)
+        Swi_post(PvP_swi);
+}
 
+Void state0_Menu_swi5(Void)
+{
+    Semaphore_post(state0_sem);
 }
 
 Void state1_Record_swi6(Void)
 {
-    if(currentState == 1)
-        Semaphore_post(state1_sem);
-
+    Semaphore_post(state1_sem);
 }
 
 Void state2_PvP_swi7(Void)
 {
-    if(currentState == 2)
-        Semaphore_post(state2_sem);
+    Semaphore_post(state2_sem);
 }
 
 /* ======== SWIs ======== */
@@ -263,6 +279,7 @@ Void Testing(Void) //priority 1 (lowest task priority)
 Void state0_menu_Tsk(Void)
 {
     Semaphore_pend(state0_sem, BIOS_WAIT_FOREVER);
+    PWM_custom_dutycycle(0.9);
     if(currentState == 0) {
         //print self playing or pvp?
         currentState = (currentState + 1) % 3;
@@ -272,7 +289,11 @@ Void state0_menu_Tsk(Void)
 Void state1_Record_Tsk(Void)
 {
     Semaphore_pend(state1_sem, BIOS_WAIT_FOREVER);
+    PWM_custom_dutycycle(0.7);
     //start sampling
+    EALLOW;
+    ADC_init();
+    EDIS;
 }
 
 //Void state2_PvP_Tsk(Void){
