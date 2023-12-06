@@ -103,7 +103,7 @@ int currentState = 0;
 volatile UInt time_ten_ms = 0;
 volatile UInt tickCount = 0; //counter incremented by timer interrupt
 int bufferIndex = 0;
-int fun_freq;
+int fun_freq = 0;
 
 
 /* ======== main ======== */
@@ -242,7 +242,8 @@ Void fund_freq_swi(Void)
     {
         if(RFFTmagBuff[i] > 800)
         {
-            fun_freq = i*4000;
+            float calc = (float)i / (RFFT_SIZE/2+1) * 4000.0;
+            fun_freq = calc;
             break;
         }
     }
