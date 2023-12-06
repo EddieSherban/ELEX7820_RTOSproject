@@ -11,7 +11,7 @@
 //defines:
 #define xdc__strict //suppress typedef warnings
 
-#define RFFT_STAGES     4
+#define RFFT_STAGES     11
 #define RFFT_SIZE       (1 << RFFT_STAGES)
 #define EPSILON         0.01
 #define PI 3.14159265358979323
@@ -91,8 +91,8 @@ RFFT_F32_STRUCT rfft;
 //Declare and initialize FFT structure object:
 RFFT_F32_STRUCT_Handle hnd_rfft = &rfft;
 
-float RadStep = 0.1963495408494f; //step
-float Rad = 0.0f;
+//float RadStep = 0.1963495408494f; //step
+//float Rad = 0.0f;
 
 Uint16 once = TRUE;
 Uint16 bin = 0;
@@ -119,7 +119,6 @@ Int main()
     for(i=0; i < RFFT_SIZE; i++){
         RFFTin1Buff[i] = 0.0f;
     }
-
     hnd_rfft->FFTSize   = RFFT_SIZE;
     hnd_rfft->FFTStages = RFFT_STAGES;
     hnd_rfft->InBuf     = &RFFTin1Buff[0];  //Input buffer
@@ -201,8 +200,6 @@ Void adc_hwi(Void)
     //soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
 
     RFFTin1Buff[bufferIndex] = soc0_adc_voltage;
-    System_printf("adca3 voltage: %.6f \n",RFFTin1Buff[bufferIndex]);
-    System_printf("adca3 voltage: %.6f \n",soc0_adc_voltage);
     bufferIndex++;
     if(bufferIndex >= RFFT_SIZE)
     {
@@ -234,6 +231,7 @@ Void calc_FFT_swi4(Void)
 {
     RFFT_f32(hnd_rfft);
     RFFT_f32_mag(hnd_rfft);
+    Swi_post(find_fund);
 }
 
 Void transition_swi(Void)
