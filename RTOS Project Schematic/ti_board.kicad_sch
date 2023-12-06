@@ -1881,7 +1881,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0e4fe4bf-3413-4ab8-8a16-956c5af72d70)
   )
-  (hierarchical_label "PI_SPI_SIMO" (shape bidirectional) (at 250.19 39.37 0) (fields_autoplaced)
+  (hierarchical_label "PI_SPI_MISO" (shape bidirectional) (at 250.19 39.37 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 1ad10a5b-faea-4027-ac33-753f1c2f9780)
   )
