@@ -8,6 +8,10 @@
 //
 // Date:                Oct. 13, 2023
 
+/******************NOTE:
+ *  Eddie worked on all TI code, Felix worked on all the Raspberry Pi code
+ */
+
 //defines:
 #define xdc__strict //suppress typedef warnings
 
@@ -27,7 +31,8 @@
 #include "LabProject_main.h"
 
 //Swi handle defined in .cfg file:
-extern const Swi_Handle FFT_swi;
+extern const Swi_Handle mic1_FFT_swi;
+extern const Swi_Handle mic2_FFT_swi;
 extern const Swi_Handle menu_swi;
 extern const Swi_Handle PvP_swi;
 extern const Swi_Handle rec_swi;
@@ -46,6 +51,7 @@ extern const Semaphore_Handle print_sem;
 extern const Semaphore_Handle state0_sem;
 extern const Semaphore_Handle state1_sem;
 extern const Semaphore_Handle state2_sem;
+extern const Semaphore_Handle confirmation;
 
 //dsp includes:
 #include "dsp/fpu_rfft.h"
@@ -53,7 +59,7 @@ extern const Semaphore_Handle state2_sem;
 #include <math.h>
 
 //peripherals
-#include "periph/F28379DZTQ/F28379D_i2c.h"
+//#include "periph/F28379DZTQ/F28379D_i2c.h"
 #include "periph/F28379DZTQ/F28379D_pwm.h"
 #include "periph/F28379DZTQ/F28379D_adc.h"
 
@@ -99,11 +105,15 @@ Uint16 bin = 0;
 int sec = 0;                    //ES
 float soc0_adc_voltage = 0;
 float soc1_adc_voltage = 0;
-int currentState = 0;
+UInt8 currentState = 0;
 volatile UInt time_ten_ms = 0;
 volatile UInt tickCount = 0; //counter incremented by timer interrupt
-int bufferIndex = 0;
-int fun_freq = 0;
+UInt16 bufferIndex = 0;
+UInt16 fun_freq1 = 0;
+UInt16 fun_freq2 = 0;
+UInt16 ref_freq1 = 0;
+UInt16 ref_freq2 = 0;
+
 
 
 /* ======== main ======== */
@@ -171,7 +181,7 @@ Void myIdleFxn(Void)
    }
 
    //debounce
-   if(100*(tickCount-time_ten_ms) >= time_ten_ms){
+   if((tickCount-time_ten_ms) >= 150){
        EALLOW;
        XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
        EDIS;
@@ -203,7 +213,7 @@ Void adc_hwi(Void)
     if(bufferIndex >= RFFT_SIZE)
     {
         bufferIndex = 0;    //reset buffer index
-        Swi_post(FFT_swi);  //post FFT SWI
+        Swi_post(mic1_FFT_swi);  //post FFT SWI
     }
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;          //clear interrupt flag
     //System_printf("adca3 voltage: %i \n",soc0_adc_voltage);
@@ -222,11 +232,30 @@ Void button_press(Void)
 
     Swi_post(trans_swi);                    //notify a transition in swi
 }
+
+Void confirmation_button(Void)
+{
+    Semaphore_post(confirmation);
+    EALLOW;
+    XintRegs.XINT2CR.bit.ENABLE = 0;            //disable interrupt, only enable when waiting for confirmation
+    EDIS;
+    XbarRegs.XBARCLR2.bit.INPUT5 = 1;   //INPUT5 X-BAR Flag Clear
+}
 /* ======== HWIs ======== */
 
 
 /* ======== SWIs ======== */
-Void calc_FFT_swi4(Void)
+Void calc_FFT_mic1(Void)
+{
+
+    RFFT_f32(hnd_rfft);
+    RFFT_f32_sincostable(hnd_rfft);
+    RFFT_f32_mag(hnd_rfft);
+    Swi_post(find_fund);
+    Swi_post(mic2_FFT_swi);
+}
+
+Void calc_FFT_mic2(Void)
 {
 
     RFFT_f32(hnd_rfft);
@@ -237,13 +266,13 @@ Void calc_FFT_swi4(Void)
 
 Void fund_freq_swi(Void)
 {
-
-    for(int i = 5; i <= RFFT_SIZE/2+1; i++)
+    //look for the fundamental frquency by searching for the first large bin value, starting at 50
+    for(int i = 25; i <= RFFT_SIZE/2+1; i++)
     {
         if(RFFTmagBuff[i] > 800)
         {
             float calc = (float)i / (RFFT_SIZE/2+1) * 4000.0;
-            fun_freq = calc;
+            fun_freq1 = calc;
             break;
         }
     }
@@ -251,12 +280,20 @@ Void fund_freq_swi(Void)
 
 Void transition_swi(Void)
 {
-    if(currentState == 0)
-        Swi_post(menu_swi);
-    if(currentState == 1)
-        Swi_post(rec_swi);
-    if(currentState == 2)
-        Swi_post(PvP_swi);
+    switch(currentState)
+    {
+        case 0:
+            Swi_post(menu_swi);
+            break;
+        case 1:
+            Swi_post(rec_swi);
+            break;
+        case 2:
+            Swi_post(PvP_swi);
+            break;
+        default:
+            Swi_post(menu_swi);
+    }
 }
 
 Void state0_Menu_swi5(Void)
@@ -304,11 +341,43 @@ Void state1_Record_Tsk(Void)
     EALLOW;
     ADC_init();
     EDIS;
+    //print: make a reference sound and press to confirm.
+    //wait for confirmation
+    EALLOW;
+    XintRegs.XINT2CR.bit.ENABLE = 1;            //enable interrupt only when waiting for confirmation
+    EDIS;
+    Semaphore_pend(confirmation, BIOS_WAIT_FOREVER);
+
+    ref_freq1 = fun_freq1;      //store first microphone's reference frequency
+    ref_freq2 = fun_freq2;      //store second microphoens reference frequency
+    currentState = (currentState + 1) % 3;
 }
 
-//Void state2_PvP_Tsk(Void){
+Void state2_PvP_Tsk(Void){
+    Semaphore_pend(state2_sem, BIOS_WAIT_FOREVER);
+    while(currentState == 2)
+    {
+        //tilt arena one way
 
-//}
+        if(fun_freq1 < ref_freq1)   //if the fundamental frequency
+        {
+            //pwm for motor inserted here
+            //turn clamp one way
+        } else {
+            //pwm for motor inserted here
+            //turn clamp the other way
+        }
+        if(fun_freq2 < ref_freq2)
+        {
+            //pwm for motor inserted here
+            //turn clamp one way
+        } else {
+            //pwm for motor inserted here
+            //turn clamp the other way
+        }
+    }
+    currentState = (currentState + 1) % 3;
+}
 
 Void print_message_tsk7(Void){
     while(TRUE){

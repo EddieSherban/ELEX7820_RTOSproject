@@ -20,7 +20,6 @@ ORDERED_OBJS += \
 "./dsp/RFFT_f32_sincostable.obj" \
 "./periph/F28379DZTQ/F28379D_adc.obj" \
 "./periph/F28379DZTQ/F28379D_gpio.obj" \
-"./periph/F28379DZTQ/F28379D_i2c.obj" \
 "./periph/F28379DZTQ/F28379D_pwm.obj" \
 "../F2837xD_Headers_BIOS_cpu1.cmd" \
 "../TMS320F28379D.cmd" \
@@ -170,8 +169,8 @@ labproject.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_i2c.obj" "periph\F28379DZTQ\F28379D_pwm.obj" 
-	-$(RM) "F2837xD_GlobalVariableDefs.d" "LabProject_DevInit.d" "LabProject_main.d" "dsp\RFFT_f32_sincostable.d" "periph\F28379DZTQ\F28379D_adc.d" "periph\F28379DZTQ\F28379D_gpio.d" "periph\F28379DZTQ\F28379D_i2c.d" "periph\F28379DZTQ\F28379D_pwm.d" 
+	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_pwm.obj" 
+	-$(RM) "F2837xD_GlobalVariableDefs.d" "LabProject_DevInit.d" "LabProject_main.d" "dsp\RFFT_f32_sincostable.d" "periph\F28379DZTQ\F28379D_adc.d" "periph\F28379DZTQ\F28379D_gpio.d" "periph\F28379DZTQ\F28379D_pwm.d" 
 	-$(RM) "DelayUs.d" "dsp\RFFT_f32.d" "dsp\RFFT_f32_mag.d" "dsp\RFFT_f32_phase.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'

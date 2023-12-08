@@ -1,5 +1,5 @@
 #
-_XDCBUILDCOUNT = 
+_XDCBUILDCOUNT = 0
 ifneq (,$(findstring path,$(_USEXDCENV_)))
 override XDCPATH = D:/E_Eng/ELEX7820/tools/sysbios/bios_6_83_00_18/packages
 override XDCROOT = D:/E_Eng/ELEX7820/CCS/CCS/xdctools_3_62_01_15_core

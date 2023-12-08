@@ -11,7 +11,7 @@
 // Date:                Oct 29, 2021
 
 #include <Headers/F2837xD_device.h>
-#include "periph/F28379DZTQ/F28379D_i2c.h"
+//#include "periph/F28379DZTQ/F28379D_i2c.h"
 #include "periph/F28379DZTQ/F28379D_pwm.h"
 #include "periph/F28379DZTQ/F28379D_adc.h"
 #include "periph/F28379DZTQ/F28379D_gpio.h"
