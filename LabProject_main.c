@@ -303,7 +303,8 @@ Void state1_Record_Tsk(Void)
     //start sampling
     EALLOW;
     ADC_init();
-    EDIS;
+    EDIS; awegiouhaweioguhawiuefghoiawleuhfioawuehfgi
+    \why is this not changing my stupid awtwoehgaoweuirhnbg
 }
 
 //Void state2_PvP_Tsk(Void){
