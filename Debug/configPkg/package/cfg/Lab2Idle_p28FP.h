@@ -17,7 +17,7 @@ extern const ti_sysbios_family_c28_Hwi_Handle hwi0;
 extern const ti_sysbios_family_c28_Hwi_Handle hwi1;
 
 #include <ti/sysbios/knl/Swi.h>
-extern const ti_sysbios_knl_Swi_Handle FFT_swi;
+extern const ti_sysbios_knl_Swi_Handle mic1_FFT_swi;
 
 #include <ti/sysbios/knl/Task.h>
 extern const ti_sysbios_knl_Task_Handle state0;
@@ -63,6 +63,15 @@ extern const ti_sysbios_knl_Swi_Handle trans_swi;
 
 #include <ti/sysbios/knl/Swi.h>
 extern const ti_sysbios_knl_Swi_Handle find_fund;
+
+#include <ti/sysbios/knl/Semaphore.h>
+extern const ti_sysbios_knl_Semaphore_Handle confirmation;
+
+#include <ti/sysbios/family/c28/Hwi.h>
+extern const ti_sysbios_family_c28_Hwi_Handle hwi2;
+
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle mic2_FFT_swi;
 
 extern int xdc_runtime_Startup__EXECFXN__C;
 
