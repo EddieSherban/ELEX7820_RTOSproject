@@ -12,13 +12,6 @@ GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
 ORDERED_OBJS += \
 "./DelayUs.obj" \
 "./F2837xD_GlobalVariableDefs.obj" \
-<<<<<<< HEAD
-"./Lab_proj_Idle_DevInit.obj" \
-"./Lab_proj_Idle_main.obj" \
-"./timer.obj" \
-"./periph/F28379DZTQ/Init_ADCa.obj" \
-"./periph/F28379DZTQ/Init_SPIa.obj" \
-=======
 "./LabProject_DevInit.obj" \
 "./LabProject_main.obj" \
 "./dsp/RFFT_f32.obj" \
@@ -28,7 +21,11 @@ ORDERED_OBJS += \
 "./periph/F28379DZTQ/F28379D_adc.obj" \
 "./periph/F28379DZTQ/F28379D_gpio.obj" \
 "./periph/F28379DZTQ/F28379D_pwm.obj" \
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+"./periph/F28379DZTQ/F28379D_spi.obj" \
+"./periph/F28379DZTQ/Init_ADCa.obj" \
+"./periph/RPi/rpi_image_capture/lcd.obj" \
+"./periph/RPi/rpi_image_capture/main.obj" \
+"./periph/RPi/rpi_image_capture/spi.obj" \
 "../F2837xD_Headers_BIOS_cpu1.cmd" \
 "../TMS320F28379D.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -42,16 +39,13 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
-<<<<<<< HEAD
--include periph/F28379DZTQ/subdir_vars.mk
--include subdir_rules.mk
-=======
 -include dsp/subdir_vars.mk
 -include periph/F28379DZTQ/subdir_vars.mk
+-include periph/RPi/rpi_image_capture/subdir_vars.mk
 -include subdir_rules.mk
 -include dsp/subdir_rules.mk
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
 -include periph/F28379DZTQ/subdir_rules.mk
+-include periph/RPi/rpi_image_capture/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -168,11 +162,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 ELEX7820_RTOSproject.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-<<<<<<< HEAD
-	"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"ELEX7820_RTOSproject.map" --stack_size=0x200 --warn_sections -i"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="ELEX7820_RTOSproject_linkInfo.xml" --rom_model -o "ELEX7820_RTOSproject.out" $(ORDERED_OBJS)
-=======
-	"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --c11 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"labproject.map" --stack_size=0x200 --warn_sections -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="labproject_linkInfo.xml" --rom_model -o "labproject.out" $(ORDERED_OBJS)
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+	"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --c11 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=coffabi -z -m"ELEX7820_RTOSproject.map" --stack_size=0x200 --warn_sections -i"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="ELEX7820_RTOSproject_linkInfo.xml" --rom_model -o "ELEX7820_RTOSproject.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
@@ -186,14 +176,10 @@ ELEX7820_RTOSproject.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-<<<<<<< HEAD
-	-$(RM) "F2837xD_GlobalVariableDefs.obj" "Lab_proj_Idle_DevInit.obj" "Lab_proj_Idle_main.obj" "timer.obj" "periph\F28379DZTQ\Init_ADCa.obj" "periph\F28379DZTQ\Init_SPIa.obj" 
-	-$(RM) "F2837xD_GlobalVariableDefs.d" "Lab_proj_Idle_DevInit.d" "Lab_proj_Idle_main.d" "timer.d" "periph\F28379DZTQ\Init_ADCa.d" "periph\F28379DZTQ\Init_SPIa.d" 
-=======
-	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_pwm.obj" 
-	-$(RM) "F2837xD_GlobalVariableDefs.d" "LabProject_DevInit.d" "LabProject_main.d" "dsp\RFFT_f32_sincostable.d" "periph\F28379DZTQ\F28379D_adc.d" "periph\F28379DZTQ\F28379D_gpio.d" "periph\F28379DZTQ\F28379D_pwm.d" 
+	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_pwm.obj" "periph\F28379DZTQ\F28379D_spi.obj" "periph\F28379DZTQ\Init_ADCa.obj" "periph\RPi\rpi_image_capture\lcd.obj" "periph\RPi\rpi_image_capture\main.obj" "periph\RPi\rpi_image_capture\spi.obj" 
+	-$(RM) "F2837xD_GlobalVariableDefs.d" "LabProject_DevInit.d" "LabProject_main.d" "dsp\RFFT_f32_sincostable.d" "periph\F28379DZTQ\F28379D_adc.d" "periph\F28379DZTQ\F28379D_gpio.d" "periph\F28379DZTQ\F28379D_pwm.d" "periph\F28379DZTQ\F28379D_spi.d" "periph\F28379DZTQ\Init_ADCa.d" 
+	-$(RM) "periph\RPi\rpi_image_capture\lcd.d" "periph\RPi\rpi_image_capture\main.d" "periph\RPi\rpi_image_capture\spi.d" 
 	-$(RM) "DelayUs.d" "dsp\RFFT_f32.d" "dsp\RFFT_f32_mag.d" "dsp\RFFT_f32_phase.d" 
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

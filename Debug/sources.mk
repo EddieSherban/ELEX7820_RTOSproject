@@ -124,9 +124,7 @@ GEN_OPTS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-<<<<<<< HEAD
-=======
 dsp \
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
 periph/F28379DZTQ \
+periph/RPi/rpi_image_capture \
 

@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/Lab2Idle_p28FP.c"/>
     </sources>
     <configscripts>
-        <srcFile name="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg"/>
+        <srcFile name="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -25,7 +25,7 @@
             platform="ti.platforms.sim28xx"
             isa="28FP"
             suffix="28FP"
-            rootDir="D:/E_Eng/ELEX7820/CCS/CCS/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS"
+            rootDir="C:/TexasInstruments/ccs1040/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS"
             os="undefined"
             rts="ti.targets.rts2800">
             <model endian="little"
@@ -44,7 +44,7 @@
         isPartial="false"
         xCfgScript="package/cfg/Lab2Idle_p28FP.cfg"
         xCfgPrefix="package/cfg/Lab2Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg"
+        cfgScript="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -56,7 +56,7 @@
         profile="release"
         xCfgScript="package/cfg/Lab2Idle_p28FP.cfg"
         xCfgPrefix="package/cfg/Lab2Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg"
+        cfgScript="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg"
         cfgArgs="null"
         />
     </executables>

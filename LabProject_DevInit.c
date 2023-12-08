@@ -24,6 +24,7 @@ EALLOW; //allow access to protected registers
     //ADC_init();
     PWM_init();
     //PWM_half_dutycycle();
+    SPIa_init();
 
 EDIS; //disallow access to protected registers
 }

@@ -1,4 +1,4 @@
-// Filename: SPIa_Init.c
+// Filename: F28379D_spi.c
 // Description: SPI-A initialization
 // Version: 1.0
 // Target: TMS320F28379D
@@ -6,9 +6,7 @@
 // Date: 03 Dec 2023
 // Modified:
 
-#include <Headers/F2837xD_device.h>
-
-void Init_SPIa(void)
+void SPIa_init(void)
 {
     EALLOW;
 
@@ -95,29 +93,4 @@ void Init_SPIa(void)
 
     // Step 4. Set SPISWRESET to 1 to release the SPI from the reset state.
     SpiaRegs.SPICCR.bit.SPISWRESET = 0x1;
-}
-
-void spi_hwi()
-{
-    Uint16 test;
-
-    // Read SPIRXBUF to clear INT_FLAG
-    test = SpiaRegs.SPIRXBUF & 0xFF00;
-    SpiaRegs.SPITXBUF = test + 0x10;
-
-    if (test == 0x32)
-    {
-        int i = 0;
-    }
-
-    if (test == 0x56)
-    {
-        int i = 0;
-    }
-
-    if (test == 0x67)
-    {
-        int i = 0;
-    }
-
 }

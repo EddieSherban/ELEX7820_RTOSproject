@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg',
+        cfgScript: 'C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg',
         profile: 'release',
         cfgHome: 'xconfig_Lab2Idle',
 });
@@ -40,8 +40,8 @@ else {
 }
 
 var thisObj = {
-    cfg:        'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg',
-    outputPath: 'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/.config/xconfig_Lab2Idle',
+    cfg:        'C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg',
+    outputPath: 'C:/TexasInstruments/projects/ELEX7820_RTOSproject/.config/xconfig_Lab2Idle',
     exeName:    'Lab2Idle' + suffix,
     exeIntName: 'Lab2Idle' + suffix.replace('.', '_'),
     targ:       targ,

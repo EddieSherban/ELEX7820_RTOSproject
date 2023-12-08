@@ -11,11 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-<<<<<<< HEAD
-        cfgScript: 'C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab_proj_Idle.cfg',
-=======
-        cfgScript: 'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg',
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+        cfgScript: 'C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg',
         profile: 'release',
         cfgHome: 'configPkg',
 });
@@ -44,17 +40,10 @@ else {
 }
 
 var thisObj = {
-<<<<<<< HEAD
-    cfg:        '../Lab_proj_Idle.cfg',
-    outputPath: 'C:/TexasInstruments/projects/ELEX7820_RTOSproject/Debug/configPkg',
-    exeName:    'Lab_proj_Idle' + suffix,
-    exeIntName: 'Lab_proj_Idle' + suffix.replace('.', '_'),
-=======
     cfg:        '../Lab2Idle.cfg',
-    outputPath: 'D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Debug/configPkg',
+    outputPath: 'C:/TexasInstruments/projects/ELEX7820_RTOSproject/Debug/configPkg',
     exeName:    'Lab2Idle' + suffix,
     exeIntName: 'Lab2Idle' + suffix.replace('.', '_'),
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
     targ:       targ,
     linkerCommandFile: 'linker.cmd',
     compilerOptFile: 'compiler.opt',

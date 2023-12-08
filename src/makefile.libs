@@ -1,10 +1,6 @@
 #
 # This file was generated based on the configuration script:
-<<<<<<< HEAD
-#     C:\TexasInstruments\projects\ELEX7820_RTOSproject\Lab_proj_Idle.cfg
-=======
 #     D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject\Lab2Idle.cfg
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
 #
 # This makefile may be included in other makefiles that need to build
 # the libraries containing the compiled source files generated as
@@ -18,7 +14,7 @@
 #
 # The absolute path to the generated source directory (at the time the
 # sources were generated) is:
-#    C:\TexasInstruments\projects\ELEX7820_RTOSproject\src
+#    D:\E_Eng\ELEX7820\Labs\ELEX7820_RTOSproject\src
 #
 GEN_SRC_DIR ?= ../src
 
@@ -63,4 +59,3 @@ $(sysbios_LIB): .force
 .sysbios_clean:
 	@echo cleaning $(sysbios_SRC) ...
 	-@$(MAKE) --no-print-directory -C $(sysbios_SRC) clean
-

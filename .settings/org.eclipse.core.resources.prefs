@@ -1,19 +1,18 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=a441adcca9b728eb3ca94857d959210f385f6e41
 eclipse.preferences.version=1
-<<<<<<< HEAD
-=======
 encoding//Debug/Lab_2_files/subdir_rules.mk=UTF-8
 encoding//Debug/Lab_2_files/subdir_vars.mk=UTF-8
 encoding//Debug/dsp/subdir_rules.mk=UTF-8
 encoding//Debug/dsp/subdir_vars.mk=UTF-8
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
 encoding//Debug/makefile=UTF-8
 encoding//Debug/objects.mk=UTF-8
 encoding//Debug/periph/F28379DZTQ/subdir_rules.mk=UTF-8
 encoding//Debug/periph/F28379DZTQ/subdir_vars.mk=UTF-8
+encoding//Debug/periph/RPi/rpi_image_capture/subdir_rules.mk=UTF-8
+encoding//Debug/periph/RPi/rpi_image_capture/subdir_vars.mk=UTF-8
 encoding//Debug/sources.mk=UTF-8
 encoding//Debug/subdir_rules.mk=UTF-8
 encoding//Debug/subdir_vars.mk=UTF-8
-<<<<<<< HEAD
-encoding//periph/F28379DZTQ/Init_SPIa.c=UTF-8
-=======
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+encoding//periph/F28379DZTQ/F28379D_spi.c=UTF-8

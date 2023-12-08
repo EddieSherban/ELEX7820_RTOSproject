@@ -13,7 +13,7 @@
 #ifndef _28379D_ADC_H_
 #define _28379D_ADC_H_
 
-#include <Headers/F2837xD_device.h>\
+#include <Headers/F2837xD_device.h>
 
 void ADC_init();
 

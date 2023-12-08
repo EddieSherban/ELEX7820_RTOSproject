@@ -6,8 +6,6 @@ RemoteSystemsTempFiles/**
 **/.config/**
 **/.launches/**
 **/*.xdchelp
-<<<<<<< Updated upstream
 /Debug/
-=======
 /.metadata/
->>>>>>> Stashed changes
+

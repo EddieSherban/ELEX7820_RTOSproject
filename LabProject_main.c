@@ -38,6 +38,7 @@ extern const Swi_Handle PvP_swi;
 extern const Swi_Handle rec_swi;
 extern const Swi_Handle trans_swi;
 extern const Swi_Handle find_fund;
+extern const Swi_Handle spi_receive;
 
 //Task handle defined in .cfg file:
 extern const Task_Handle msg;
@@ -113,6 +114,7 @@ UInt16 fun_freq1 = 0;
 UInt16 fun_freq2 = 0;
 UInt16 ref_freq1 = 0;
 UInt16 ref_freq2 = 0;
+UInt16 spiDat = 0xFFFF;
 
 
 
@@ -198,6 +200,13 @@ Void myIdleFxn2(Void)       //ES
         //System_printf("Timer(sec) = %i \n",sec);
     }
 }                           //ES
+
+void spi_send(void)
+{
+    unsigned char test = 0;
+    SpiaRegs.SPITXBUF = test;
+    test++;
+}
 /* ======== IDLE FXNS ======== */
 
 
@@ -241,6 +250,13 @@ Void confirmation_button(Void)
     EDIS;
     XbarRegs.XBARCLR2.bit.INPUT5 = 1;   //INPUT5 X-BAR Flag Clear
 }
+
+void spi_hwi()
+{
+    // Read SPIRXBUF to clear INT_FLAG
+    spiData = SpiaRegs.SPIRXBUF & 0xFF00;
+
+}
 /* ======== HWIs ======== */
 
 
@@ -266,7 +282,7 @@ Void calc_FFT_mic2(Void)
 
 Void fund_freq_swi(Void)
 {
-    //look for the fundamental frquency by searching for the first large bin value, starting at 50
+    //look for the fundamental frequency by searching for the first large bin value, starting at 50
     for(int i = 25; i <= RFFT_SIZE/2+1; i++)
     {
         if(RFFTmagBuff[i] > 800)
@@ -309,6 +325,13 @@ Void state1_Record_swi6(Void)
 Void state2_PvP_swi7(Void)
 {
     Semaphore_post(state2_sem);
+}
+
+void spi_receive(void)
+{
+    int test = 0;
+    if ( (spiData & 0xFF00) == 0x32 )
+        test = 1;
 }
 
 /* ======== SWIs ======== */
