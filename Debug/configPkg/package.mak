@@ -124,74 +124,74 @@ package/%.xdc.inc package/%_configPkg.c package/%.defs.h: %.xdc $(PKGCFGS)
 	@$(MSG) generating interfaces for package configPkg" (because $@ is older than $(firstword $?))" ...
 	$(XSRUN) -f xdc/services/intern/cmd/build.xs $(MK_IDLOPTS) -m package/package.xdc.dep -i package/package.xdc.inc package.xdc
 
-.dlls,28FP .dlls: Lab_proj_Idle.p28FP
+.dlls,28FP .dlls: Lab2Idle.p28FP
 
--include package/cfg/Lab_proj_Idle_p28FP.mak
--include package/cfg/Lab_proj_Idle_p28FP.cfg.mak
+-include package/cfg/Lab2Idle_p28FP.mak
+-include package/cfg/Lab2Idle_p28FP.cfg.mak
 ifeq (,$(MK_NOGENDEPS))
--include package/cfg/Lab_proj_Idle_p28FP.dep
+-include package/cfg/Lab2Idle_p28FP.dep
 endif
-Lab_proj_Idle.p28FP: package/cfg/Lab_proj_Idle_p28FP.xdl
+Lab2Idle.p28FP: package/cfg/Lab2Idle_p28FP.xdl
 	@
 
 
 ifeq (,$(wildcard .libraries,28FP))
-Lab_proj_Idle.p28FP package/cfg/Lab_proj_Idle_p28FP.c: .libraries,28FP
+Lab2Idle.p28FP package/cfg/Lab2Idle_p28FP.c: .libraries,28FP
 endif
 
-package/cfg/Lab_proj_Idle_p28FP.c package/cfg/Lab_proj_Idle_p28FP.h package/cfg/Lab_proj_Idle_p28FP.xdl: override _PROG_NAME := Lab_proj_Idle.x28FP
-package/cfg/Lab_proj_Idle_p28FP.c: package/cfg/Lab_proj_Idle_p28FP.cfg
-package/cfg/Lab_proj_Idle_p28FP.xdc.inc: package/cfg/Lab_proj_Idle_p28FP.xdl
-package/cfg/Lab_proj_Idle_p28FP.xdl package/cfg/Lab_proj_Idle_p28FP.c: .interfaces
+package/cfg/Lab2Idle_p28FP.c package/cfg/Lab2Idle_p28FP.h package/cfg/Lab2Idle_p28FP.xdl: override _PROG_NAME := Lab2Idle.x28FP
+package/cfg/Lab2Idle_p28FP.c: package/cfg/Lab2Idle_p28FP.cfg
+package/cfg/Lab2Idle_p28FP.xdc.inc: package/cfg/Lab2Idle_p28FP.xdl
+package/cfg/Lab2Idle_p28FP.xdl package/cfg/Lab2Idle_p28FP.c: .interfaces
 
 clean:: clean,28FP
-	-$(RM) package/cfg/Lab_proj_Idle_p28FP.cfg
-	-$(RM) package/cfg/Lab_proj_Idle_p28FP.dep
-	-$(RM) package/cfg/Lab_proj_Idle_p28FP.c
-	-$(RM) package/cfg/Lab_proj_Idle_p28FP.xdc.inc
+	-$(RM) package/cfg/Lab2Idle_p28FP.cfg
+	-$(RM) package/cfg/Lab2Idle_p28FP.dep
+	-$(RM) package/cfg/Lab2Idle_p28FP.c
+	-$(RM) package/cfg/Lab2Idle_p28FP.xdc.inc
 
 clean,28FP::
-	-$(RM) Lab_proj_Idle.p28FP
-.executables,28FP .executables: Lab_proj_Idle.x28FP
+	-$(RM) Lab2Idle.p28FP
+.executables,28FP .executables: Lab2Idle.x28FP
 
-Lab_proj_Idle.x28FP: |Lab_proj_Idle.p28FP
+Lab2Idle.x28FP: |Lab2Idle.p28FP
 
--include package/cfg/Lab_proj_Idle.x28FP.mak
-Lab_proj_Idle.x28FP: package/cfg/Lab_proj_Idle_p28FP.o28FP 
+-include package/cfg/Lab2Idle.x28FP.mak
+Lab2Idle.x28FP: package/cfg/Lab2Idle_p28FP.o28FP 
 	$(RM) $@
 	@$(MSG) lnk28FP $@ ...
 	$(RM) $(XDCCFGDIR)/$@.map
-	$(ti.targets.C28_float.rootDir)/bin/cl2000 -fs $(XDCCFGDIR)$(dir $@). -q -u _c_int00 -z  -o $@ package/cfg/Lab_proj_Idle_p28FP.o28FP   package/cfg/Lab_proj_Idle_p28FP.xdl  -w -c -m $(XDCCFGDIR)/$@.map -l $(ti.targets.C28_float.rootDir)/lib/libc.a
+	$(ti.targets.C28_float.rootDir)/bin/cl2000 -fs $(XDCCFGDIR)$(dir $@). -q -u _c_int00 -z  -o $@ package/cfg/Lab2Idle_p28FP.o28FP   package/cfg/Lab2Idle_p28FP.xdl  -w -c -m $(XDCCFGDIR)/$@.map -l $(ti.targets.C28_float.rootDir)/lib/libc.a
 	
-Lab_proj_Idle.x28FP: export C_DIR=
-Lab_proj_Idle.x28FP: PATH:=$(ti.targets.C28_float.rootDir)/bin/;$(PATH)
-Lab_proj_Idle.x28FP: Path:=$(ti.targets.C28_float.rootDir)/bin/;$(PATH)
+Lab2Idle.x28FP: export C_DIR=
+Lab2Idle.x28FP: PATH:=$(ti.targets.C28_float.rootDir)/bin/;$(PATH)
+Lab2Idle.x28FP: Path:=$(ti.targets.C28_float.rootDir)/bin/;$(PATH)
 
-Lab_proj_Idle.test test,28FP test: Lab_proj_Idle.x28FP.test
+Lab2Idle.test test,28FP test: Lab2Idle.x28FP.test
 
-Lab_proj_Idle.x28FP.test:: Lab_proj_Idle.x28FP
+Lab2Idle.x28FP.test:: Lab2Idle.x28FP
 ifeq (,$(_TESTLEVEL))
-	@$(MAKE) -R -r --no-print-directory -f $(XDCROOT)/packages/xdc/bld/xdc.mak _TESTLEVEL=1 Lab_proj_Idle.x28FP.test
+	@$(MAKE) -R -r --no-print-directory -f $(XDCROOT)/packages/xdc/bld/xdc.mak _TESTLEVEL=1 Lab2Idle.x28FP.test
 else
 	@$(MSG) running $<  ...
-	$(call EXEC.Lab_proj_Idle.x28FP, ) 
+	$(call EXEC.Lab2Idle.x28FP, ) 
 endif
 
 clean,28FP::
-	-$(RM) $(wildcard .tmp,Lab_proj_Idle.x28FP,*)
+	-$(RM) $(wildcard .tmp,Lab2Idle.x28FP,*)
 
 
 clean:: clean,28FP
 
 clean,28FP::
-	-$(RM) Lab_proj_Idle.x28FP
+	-$(RM) Lab2Idle.x28FP
 %,copy:
 	@$(if $<,,$(MSG) don\'t know how to build $*; exit 1)
 	@$(MSG) cp $< $@
 	$(RM) $@
 	$(CP) $< $@
-Lab_proj_Idle_p28FP.o28FP,copy : package/cfg/Lab_proj_Idle_p28FP.o28FP
-Lab_proj_Idle_p28FP.s28FP,copy : package/cfg/Lab_proj_Idle_p28FP.s28FP
+Lab2Idle_p28FP.o28FP,copy : package/cfg/Lab2Idle_p28FP.o28FP
+Lab2Idle_p28FP.s28FP,copy : package/cfg/Lab2Idle_p28FP.s28FP
 
 $(XDCCFGDIR)%.c $(XDCCFGDIR)%.h $(XDCCFGDIR)%.xdl: $(XDCCFGDIR)%.cfg $(XDCROOT)/packages/xdc/cfg/Main.xs | .interfaces
 	@$(MSG) "configuring $(_PROG_NAME) from $< ..."
