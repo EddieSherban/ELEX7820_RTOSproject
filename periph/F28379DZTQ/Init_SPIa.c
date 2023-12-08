@@ -47,49 +47,77 @@ void Init_SPIa(void)
     SpiaRegs.SPICCR.bit.SPISWRESET = 0x0;
 
     // Step 2. Configure the SPI as desired:
-    // • Select either master or slave mode (MASTER_SLAVE).
+    // ï¿½ Select either master or slave mode (MASTER_SLAVE).
     SpiaRegs.SPICTL.bit.MASTER_SLAVE = 0; // SLAVE
 
-    // • Choose SPICLK polarity and phase (CLKPOLARITY and CLK_PHASE).
+    // ï¿½ Choose SPICLK polarity and phase (CLKPOLARITY and CLK_PHASE).
     SpiaRegs.SPICCR.bit.CLKPOLARITY = 0;
     SpiaRegs.SPICTL.bit.CLK_PHASE = 0;
 
-    // • Set the desired baud rate (SPIBRR).
+    // ï¿½ Set the desired baud rate (SPIBRR).
     // No effect if in SLAVE mode. Keep in case MASTER is needed.
     SpiaRegs.SPIBRR.bit.SPI_BIT_RATE = 0x3;
 
-    // • Enable high speed mode if desired (HS_MODE).
+    // ï¿½ Enable high speed mode if desired (HS_MODE).
     SpiaRegs.SPICCR.bit.HS_MODE = 0x1;
 
-    // • Set the SPI character length (SPICHAR).
-    SpiaRegs.SPICCR.bit.SPICHAR = 0xF;
+    // ï¿½ Set the SPI character length (SPICHAR).
+    SpiaRegs.SPICCR.bit.SPICHAR = 0x7; // 8-bit mode
 
-    // • Clear the SPI Flags (OVERRUN_FLAG, INT_FLAG).
+    // Set TALK mode
+
+    SpiaRegs.SPICTL.bit.TALK = 0x1;
+    // ï¿½ Clear the SPI Flags (OVERRUN_FLAG, INT_FLAG).
     // Both cleared with SPISWRESET = 0
 
-    // • Enable SPISTE inversion (STEINV) if needed.
+    // ï¿½ Enable SPISTE inversion (STEINV) if needed.
     // Not needed.
 
-    // • Enable 3-wire mode (TRIWIRE) if needed.
+    // ï¿½ Enable 3-wire mode (TRIWIRE) if needed.
     // Not needed.
 
-    // • If using FIFO enhancements:
-    // – Enable the FIFO enhancements (SPIFFENA).
-    // – Clear the FIFO Flags (TXFFINTCLR, RXFFOVFCLR, and RXFFINTCLR).
-    // – Release transmit and receive FIFO resets (TXFIFO and RXFIFORESET).
-    // – Release SPI FIFO channels from reset (SPIRST).
+    // ï¿½ If using FIFO enhancements:
+    // ï¿½ Enable the FIFO enhancements (SPIFFENA).
+    // ï¿½ Clear the FIFO Flags (TXFFINTCLR, RXFFOVFCLR, and RXFFINTCLR).
+    // ï¿½ Release transmit and receive FIFO resets (TXFIFO and RXFIFORESET).
+    // ï¿½ Release SPI FIFO channels from reset (SPIRST).
     // Not needed.
 
     // Step 3. If interrupts are used:
-    // • In non-FIFO mode, enable the receiver overrun and/or SPI interrupts (OVERRUNINTENA
+    // ï¿½ In non-FIFO mode, enable the receiver overrun and/or SPI interrupts (OVERRUNINTENA
     // and SPIINTENA).
     SpiaRegs.SPICTL.bit.OVERRUNINTENA = 0x1;
     SpiaRegs.SPICTL.bit.SPIINTENA = 0x1;
 
-    // • In FIFO mode, set the transmit and receive interrupt levels (TXFFIL and RXFFIL) then
+    // ï¿½ In FIFO mode, set the transmit and receive interrupt levels (TXFFIL and RXFFIL) then
     // enable the interrupts (TXFFIENA and RXFFIENA).
     // Not needed.
 
     // Step 4. Set SPISWRESET to 1 to release the SPI from the reset state.
     SpiaRegs.SPICCR.bit.SPISWRESET = 0x1;
+}
+
+void spi_hwi()
+{
+    Uint16 test;
+
+    // Read SPIRXBUF to clear INT_FLAG
+    test = SpiaRegs.SPIRXBUF & 0xFF00;
+    SpiaRegs.SPITXBUF = test + 0x10;
+
+    if (test == 0x32)
+    {
+        int i = 0;
+    }
+
+    if (test == 0x56)
+    {
+        int i = 0;
+    }
+
+    if (test == 0x67)
+    {
+        int i = 0;
+    }
+
 }

@@ -1,5 +1,5 @@
 #
-_XDCBUILDCOUNT = 
+_XDCBUILDCOUNT = 0
 ifneq (,$(findstring path,$(_USEXDCENV_)))
 override XDCPATH = C:/TexasInstruments/bios_6_83_00_18/packages
 override XDCROOT = C:/TexasInstruments/ccs1040/xdctools_3_62_01_15_core
