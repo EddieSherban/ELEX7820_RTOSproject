@@ -6,6 +6,8 @@
 // Date: 03 Dec 2023
 // Modified:
 
+#include "F28379D_spi.h"
+
 void SPIa_init(void)
 {
     EALLOW;

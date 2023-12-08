@@ -38,7 +38,7 @@ extern const Swi_Handle PvP_swi;
 extern const Swi_Handle rec_swi;
 extern const Swi_Handle trans_swi;
 extern const Swi_Handle find_fund;
-extern const Swi_Handle spi_receive;
+extern const Swi_Handle spi_rx;
 
 //Task handle defined in .cfg file:
 extern const Task_Handle msg;
@@ -114,7 +114,7 @@ UInt16 fun_freq1 = 0;
 UInt16 fun_freq2 = 0;
 UInt16 ref_freq1 = 0;
 UInt16 ref_freq2 = 0;
-UInt16 spiDat = 0xFFFF;
+UInt16 spiData = 0xFFFF;
 
 
 
@@ -203,8 +203,21 @@ Void myIdleFxn2(Void)       //ES
 
 void spi_send(void)
 {
-    unsigned char test = 0;
-    SpiaRegs.SPITXBUF = test;
+    static unsigned int test = 0;
+
+    UInt16 value = 0xABCD;
+    UInt16 transferWord;
+
+    // Swap bits so first is last, etc
+    for (int i = 0; i < 8; ++i)
+    {
+        if (value & (1 << i))
+        {
+            transferWord |= (1 << (7 - i));
+        }
+    }
+
+    SpiaRegs.SPITXBUF = transferWord;
     test++;
 }
 /* ======== IDLE FXNS ======== */
@@ -254,7 +267,8 @@ Void confirmation_button(Void)
 void spi_hwi()
 {
     // Read SPIRXBUF to clear INT_FLAG
-    spiData = SpiaRegs.SPIRXBUF & 0xFF00;
+    spiData = SpiaRegs.SPIRXBUF;
+    Swi_post(spi_rx);
 
 }
 /* ======== HWIs ======== */
