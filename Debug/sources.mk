@@ -126,5 +126,4 @@ SUBDIRS := \
 . \
 dsp \
 periph/F28379DZTQ \
-periph/RPi/rpi_image_capture \
 

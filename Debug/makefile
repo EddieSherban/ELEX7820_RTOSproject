@@ -23,9 +23,6 @@ ORDERED_OBJS += \
 "./periph/F28379DZTQ/F28379D_pwm.obj" \
 "./periph/F28379DZTQ/F28379D_spi.obj" \
 "./periph/F28379DZTQ/Init_ADCa.obj" \
-"./periph/RPi/rpi_image_capture/lcd.obj" \
-"./periph/RPi/rpi_image_capture/main.obj" \
-"./periph/RPi/rpi_image_capture/spi.obj" \
 "../F2837xD_Headers_BIOS_cpu1.cmd" \
 "../TMS320F28379D.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -41,11 +38,9 @@ RMDIR := RMDIR /S/Q
 -include subdir_vars.mk
 -include dsp/subdir_vars.mk
 -include periph/F28379DZTQ/subdir_vars.mk
--include periph/RPi/rpi_image_capture/subdir_vars.mk
 -include subdir_rules.mk
 -include dsp/subdir_rules.mk
 -include periph/F28379DZTQ/subdir_rules.mk
--include periph/RPi/rpi_image_capture/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -176,9 +171,8 @@ ELEX7820_RTOSproject.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_pwm.obj" "periph\F28379DZTQ\F28379D_spi.obj" "periph\F28379DZTQ\Init_ADCa.obj" "periph\RPi\rpi_image_capture\lcd.obj" "periph\RPi\rpi_image_capture\main.obj" "periph\RPi\rpi_image_capture\spi.obj" 
+	-$(RM) "DelayUs.obj" "F2837xD_GlobalVariableDefs.obj" "LabProject_DevInit.obj" "LabProject_main.obj" "dsp\RFFT_f32.obj" "dsp\RFFT_f32_mag.obj" "dsp\RFFT_f32_phase.obj" "dsp\RFFT_f32_sincostable.obj" "periph\F28379DZTQ\F28379D_adc.obj" "periph\F28379DZTQ\F28379D_gpio.obj" "periph\F28379DZTQ\F28379D_pwm.obj" "periph\F28379DZTQ\F28379D_spi.obj" "periph\F28379DZTQ\Init_ADCa.obj" 
 	-$(RM) "F2837xD_GlobalVariableDefs.d" "LabProject_DevInit.d" "LabProject_main.d" "dsp\RFFT_f32_sincostable.d" "periph\F28379DZTQ\F28379D_adc.d" "periph\F28379DZTQ\F28379D_gpio.d" "periph\F28379DZTQ\F28379D_pwm.d" "periph\F28379DZTQ\F28379D_spi.d" "periph\F28379DZTQ\Init_ADCa.d" 
-	-$(RM) "periph\RPi\rpi_image_capture\lcd.d" "periph\RPi\rpi_image_capture\main.d" "periph\RPi\rpi_image_capture\spi.d" 
 	-$(RM) "DelayUs.d" "dsp\RFFT_f32.d" "dsp\RFFT_f32_mag.d" "dsp\RFFT_f32_phase.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'

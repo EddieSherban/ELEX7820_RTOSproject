@@ -37,9 +37,9 @@ void GPIO_init()
     GpioCtrlRegs.GPAPUD.bit.GPIO29 = 0;         //pull up resistor enabled; so we don't need to use pull down resistors on the breadboard
 
     //configure GPIOs as input for buttons (confriamtion button)
-    GpioCtrlRegs.GPAMUX2.bit.GPIO30 = 0;        //set pin as gpio
-    GpioCtrlRegs.GPADIR.bit.GPIO30 = 0;         //set gpio as input
-    GpioCtrlRegs.GPAPUD.bit.GPIO30 = 0;         //pull up resistor enabled; so we don't need to use pull down resistors on the breadboard
+    GpioCtrlRegs.GPAMUX2.bit.GPIO24 = 0;        //set pin as gpio
+    GpioCtrlRegs.GPADIR.bit.GPIO24 = 0;         //set gpio as input
+    GpioCtrlRegs.GPAPUD.bit.GPIO24 = 0;         //pull up resistor enabled; so we don't need to use pull down resistors on the breadboard
 
     //hwi interrupt number 35 --> XINT1 interrupt
     XintRegs.XINT1CR.bit.POLARITY = 0;          //negative edge triggered; pressing button creates 0V, down from 3.3V from Pull-up res.
@@ -51,6 +51,6 @@ void GPIO_init()
     //hwi interrupt number 36 --> XINT2 interrupt
     XintRegs.XINT2CR.bit.POLARITY = 0;          //negative edge triggered; pressing button creates 0V, down from 3.3V from Pull-up res.
     XintRegs.XINT2CR.bit.ENABLE = 0;            //disable interrupt initially, only enable when waiting for confirmation
-    InputXbarRegs.INPUT5SELECT = 30;            //connect input5 to GPIO30
+    InputXbarRegs.INPUT5SELECT = 24;            //connect input5 to GPIO24
 
 }

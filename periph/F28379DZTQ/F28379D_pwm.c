@@ -30,12 +30,12 @@ void PWM_init()
     EPwm4Regs.TBCTL.bit.CTRMODE = TB_COUNT_UP;      // Count-up mode
     EPwm4Regs.TBCTL.bit.SYNCOSEL = 3;
 
-    EPwm4Regs.TBPRD = TB_PRD;                       // Time-base period
+    EPwm4Regs.TBPRD = TB_PRD_CLAMP;                       // Time-base period
 
     EPwm4Regs.CMPCTL.bit.SHDWAMODE = SHADOW;     //
     EPwm4Regs.CMPCTL.bit.LOADAMODE = 0;
 
-    EPwm4Regs.CMPA.bit.CMPA = TB_PRD * INIT_DUTY_CYCLE;  // Default 50% duty cycle period
+    EPwm4Regs.CMPA.bit.CMPA = TB_PRD_CLAMP * INIT_DUTY_CYCLE;  // Default 50% duty cycle period
 
     EPwm4Regs.AQCTLA.bit.ZRO = AQ_SET;      // Set high when count at 0
     EPwm4Regs.AQCTLA.bit.CAU = AQ_CLEAR;    // Set low when count at CMPA
@@ -43,13 +43,33 @@ void PWM_init()
 
 void PWM_custom_dutycycle(float duty_cycle)
 {
-    EPwm4Regs.CMPA.bit.CMPA = (Uint16)(TB_PRD * duty_cycle);
+    EPwm4Regs.CMPA.bit.CMPA = (Uint16)(TB_PRD_CLAMP * duty_cycle);
 }
 
 void PWM_half_dutycycle(){
-    EPwm4Regs.CMPA.bit.CMPA = TB_PRD * 0.5;
+    EPwm4Regs.CMPA.bit.CMPA = TB_PRD_CLAMP * 0.5;
 }
 
 void PWM_no_dutycycle(){
     EPwm4Regs.CMPA.bit.CMPA = 0;
+}
+
+void clamp_motor1_turn_left(float duty_cycle){
+    EPwm4Regs.CMPA.bit.CMPA = (Uint16)(TB_PRD_CLAMP * duty_cycle);
+}
+
+void clamp_motor2_turn_left(){
+
+}
+
+void clamp_motor1_turn_right(){
+
+}
+
+void clamp_motor2_turn_right(){
+
+}
+
+void arena_motor(){
+
 }

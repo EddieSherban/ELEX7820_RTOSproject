@@ -73,6 +73,18 @@ extern const ti_sysbios_family_c28_Hwi_Handle hwi2;
 #include <ti/sysbios/knl/Swi.h>
 extern const ti_sysbios_knl_Swi_Handle mic2_FFT_swi;
 
+#include <ti/sysbios/family/c28/Hwi.h>
+extern const ti_sysbios_family_c28_Hwi_Handle hwi3;
+
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle spi_rx;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle state1;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle state2;
+
 extern int xdc_runtime_Startup__EXECFXN__C;
 
 extern int xdc_runtime_Startup__RESETFXN__C;

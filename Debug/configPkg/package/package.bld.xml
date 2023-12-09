@@ -7,11 +7,7 @@
         <srcFile name="package/cfg/Lab2Idle_p28FP.c"/>
     </sources>
     <configscripts>
-<<<<<<< HEAD
-        <srcFile name="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"/>
-=======
-        <srcFile name="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg"/>
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+        <srcFile name="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -46,15 +42,9 @@
         platform="ti.platforms.tms320x28:TMS320F28379D"
         profile="release"
         isPartial="false"
-<<<<<<< HEAD
-        xCfgScript="package/cfg/Lab_proj_Idle_p28FP.cfg"
-        xCfgPrefix="package/cfg/Lab_proj_Idle_p28FP"
-        cfgScript="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"
-=======
         xCfgScript="package/cfg/Lab2Idle_p28FP.cfg"
         xCfgPrefix="package/cfg/Lab2Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg"
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+        cfgScript="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -64,15 +54,9 @@
         target="ti.targets.C28_float"
         platform="ti.platforms.tms320x28:TMS320F28379D"
         profile="release"
-<<<<<<< HEAD
-        xCfgScript="package/cfg/Lab_proj_Idle_p28FP.cfg"
-        xCfgPrefix="package/cfg/Lab_proj_Idle_p28FP"
-        cfgScript="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab_proj_Idle.cfg"
-=======
         xCfgScript="package/cfg/Lab2Idle_p28FP.cfg"
         xCfgPrefix="package/cfg/Lab2Idle_p28FP"
-        cfgScript="D:/E_Eng/ELEX7820/Labs/ELEX7820_RTOSproject/Lab2Idle.cfg"
->>>>>>> a441adcca9b728eb3ca94857d959210f385f6e41
+        cfgScript="C:/TexasInstruments/projects/ELEX7820_RTOSproject/Lab2Idle.cfg"
         cfgArgs="null"
         />
     </executables>

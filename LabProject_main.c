@@ -44,6 +44,8 @@ extern const Swi_Handle spi_rx;
 extern const Task_Handle msg;
 extern const Task_Handle rec;
 extern const Task_Handle state0;
+extern const Task_Handle state1;
+extern const Task_Handle state2;
 extern const Task_Handle test;
 
 //Semaphore handles defined in .cfg file:
@@ -114,6 +116,7 @@ UInt16 fun_freq1 = 0;
 UInt16 fun_freq2 = 0;
 UInt16 ref_freq1 = 0;
 UInt16 ref_freq2 = 0;
+bool mic_fft = 0;
 UInt16 spiData = 0xFFFF;
 
 
@@ -227,10 +230,13 @@ void spi_send(void)
 //adc HWI (1st Priority)
 Void adc_hwi(Void)
 {
-    soc0_adc_voltage = AdcaResultRegs.ADCRESULT0/4095.0 * 3.0;   //result for ADCINA5
-    //soc1_adc_voltage = AdcaResultRegs.ADCRESULT1;   //result for ADCINA3
+    if(mic_fft)
+    {
+        soc0_adc_voltage = AdcaResultRegs.ADCRESULT0/4095.0 * 3.0;   //result for ADCINA5
+        RFFTin1Buff[bufferIndex] = soc0_adc_voltage;
+    }
+    soc1_adc_voltage = AdcaResultRegs.ADCRESULT1/4095.0 * 3.0;   //result for ADCINA3
 
-    RFFTin1Buff[bufferIndex] = soc0_adc_voltage;
     bufferIndex++;
     if(bufferIndex >= RFFT_SIZE)
     {
@@ -251,8 +257,8 @@ Void button_press(Void)
     EDIS;
 
     XbarRegs.XBARCLR2.bit.INPUT4 = 1;   //INPUT4 X-BAR Flag Clear
-
     Swi_post(trans_swi);                    //notify a transition in swi
+
 }
 
 Void confirmation_button(Void)
@@ -363,11 +369,12 @@ Void Testing(Void) //priority 1 (lowest task priority)
 Void state0_menu_Tsk(Void)
 {
     Semaphore_pend(state0_sem, BIOS_WAIT_FOREVER);
-    PWM_custom_dutycycle(0.9);
+    PWM_custom_dutycycle(0);
     if(currentState == 0) {
         //print self playing or pvp?
-        currentState = (currentState + 1) % 3;
     }
+    currentState = (currentState + 1) % 3;
+
 }
 
 Void state1_Record_Tsk(Void)
@@ -381,19 +388,25 @@ Void state1_Record_Tsk(Void)
     //print: make a reference sound and press to confirm.
     //wait for confirmation
     EALLOW;
+    XintRegs.XINT1CR.bit.ENABLE = 0;    //disable xint1 interrupt
     XintRegs.XINT2CR.bit.ENABLE = 1;            //enable interrupt only when waiting for confirmation
     EDIS;
     Semaphore_pend(confirmation, BIOS_WAIT_FOREVER);
 
+    XintRegs.XINT1CR.bit.ENABLE = 1;    //disable xint1 interrupt
     ref_freq1 = fun_freq1;      //store first microphone's reference frequency
     ref_freq2 = fun_freq2;      //store second microphoens reference frequency
     currentState = (currentState + 1) % 3;
+
 }
 
 Void state2_PvP_Tsk(Void){
+    XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
     Semaphore_pend(state2_sem, BIOS_WAIT_FOREVER);
-    while(currentState == 2)
-    {
+    XintRegs.XINT1CR.bit.ENABLE = 1;    //enable xint1 interrupt
+    clamp_motor1_turn_left(0.3);
+    //while(currentState == 2)
+    //{
         //tilt arena one way
 
         if(fun_freq1 < ref_freq1)   //if the fundamental frequency
@@ -412,8 +425,8 @@ Void state2_PvP_Tsk(Void){
             //pwm for motor inserted here
             //turn clamp the other way
         }
-    }
-    currentState = (currentState + 1) % 3;
+    //}Sema
+        currentState = (currentState + 1) % 3;
 }
 
 Void print_message_tsk7(Void){
